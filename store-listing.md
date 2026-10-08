@@ -1,9 +1,9 @@
-# Google Play — тексты для «Моя ферма»
+# Google Play — тексты для «Жизнь»
 
 ## 🇷🇺 Русский
 
 **Название (до 30 символов):**
-Моя ферма
+Жизнь
 
 **Краткое описание (до 80 символов):**
 Расти ферму от курицы до единорога: животные, огород, редкие породы!
@@ -27,7 +27,7 @@
 Рыбалка, ловля яиц, «три в ряд», стрижка овец, колесо фортуны и ежедневный подарок.
 
 🗺️ НОВЫЕ ЗЕМЛИ
-Купи за накопленные деньги остров, горы и саванну: на каждой земле живут свои животные.
+Купи за накопленные деньги остров, горы, саванну, а также Азию, Европу, Африку и Америку: на каждой земле живут свои животные.
 
 🏆 СОРЕВНУЙСЯ
 Соревнование недели, заказы покупателей, энциклопедия животных и достижения.
@@ -35,14 +35,14 @@
 Играй в своём темпе: никаких таймеров, которые мешают играть. Реклама — только за награду, по желанию.
 
 **Что нового (до 500 символов):**
-Версия 1.0.4: украшения можно показывать и скрывать; земли покупаются за деньги (остров, горы, саванна), престиж убран; после коровы животные дороже, а доход меньше; редкие породы слабее; картошка, арбуз и 💎 элитный огород.
+Версия 1.0.1: новые земли — Азия, Европа, Африка и Америка с 12 новыми животными; продажа лишних животных другим фермерам, новый баланс; украшения можно показывать и скрывать; земли покупаются за деньги (остров, горы, саванна), престиж убран; после коровы животные дороже, а доход меньше; редкие породы слабее; картошка, арбуз и 💎 элитный огород.
 
 ---
 
 ## 🇬🇧 English
 
 **Title (max 30 chars):**
-My Farm
+Life
 
 **Short description (max 80 chars):**
 Grow your farm from a chicken to a unicorn: animals, garden, rare breeds!
@@ -66,7 +66,7 @@ Rain speeds up the garden, storms scare the animals, drought slows growth. Seaso
 Fishing, egg catching, match-3, sheep shearing, a wheel of fortune and a daily gift.
 
 🗺️ NEW LANDS
-Buy an island, mountains and a savanna with your savings: every land has its own animals.
+Buy an island, mountains, a savanna, plus Asia, Europe, Africa and America with your savings: every land has its own animals.
 
 🏆 COMPETE
 Weekly contest, customer orders, an animal encyclopedia and achievements.
@@ -74,7 +74,7 @@ Weekly contest, customer orders, an animal encyclopedia and achievements.
 Play at your own pace. Ads are optional and only for rewards.
 
 **What's new (max 500 chars):**
-Version 1.0.4: decorations can be shown or hidden; lands are bought with money (island, mountains, savanna), prestige removed; after the cow, animals cost more and earn less; rare breeds are weaker; potatoes, watermelons and the 💎 Elite Garden.
+Version 1.0.1: new lands — Asia, Europe, Africa and America with 12 new animals; sell extra animals to other farmers, new balance; decorations can be shown or hidden; lands are bought with money (island, mountains, savanna), prestige removed; after the cow, animals cost more and earn less; rare breeds are weaker; potatoes, watermelons and the 💎 Elite Garden.
 
 ---
 
