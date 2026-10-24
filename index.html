@@ -161,6 +161,33 @@ html[dir=rtl] .scene,html[dir=rtl] .pw,html[dir=rtl] #ld .ldb,html[dir=rtl] .lgg
 #ld .ldb{background:rgba(0,0,0,.28);box-shadow:inset 0 1px 3px rgba(0,0,0,.35),0 0 0 2px rgba(255,255,255,.55)}
 #ld .ldp{background:rgba(20,40,10,.55);padding:6px 16px;border-radius:16px;color:#fff;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 #ld .ldp b{color:#ffe27a}
+
+/* === Сообщество и питомцы (1.1.0) === */
+.cmt{display:flex;gap:6px;margin-bottom:10px}
+.cmt button{flex:1;min-width:0;position:relative;border:0;border-radius:12px;background:var(--card);color:var(--mut);font:inherit;font-size:clamp(9.5px,2.8vw,12px);font-weight:700;padding:6px 1px 5px;box-shadow:0 1px 3px rgba(0,0,0,.1);line-height:1.15}
+.cmt button i{display:block;font-style:normal;font-size:19px;margin-bottom:1px}
+.cmt button span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmt button.on{background:var(--acc);color:#fff}
+.cmt button u{position:absolute;top:-4px;right:2px;min-width:17px;height:17px;border-radius:9px;background:#e53935;color:#fff;font-size:10px;line-height:17px;text-decoration:none;padding:0 4px}
+.cmc{padding:12px}
+.cmr{cursor:pointer}.cmr .em{font-size:28px;min-width:36px;text-align:center}
+.cmr b{display:flex;align-items:center;gap:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.od{display:inline-block;width:8px;height:8px;border-radius:50%;background:#aaa;flex:none}.od.on{background:#43a047}
+button.b.s{min-width:0;padding:7px 10px;font-size:12px}button.b.r{background:#d04a4a}
+.cmb{display:block;height:8px;border-radius:4px;background:rgba(0,0,0,.12);overflow:hidden}.cmb u{display:block;height:100%;background:linear-gradient(90deg,#43a047,#e0a100);text-decoration:none;transition:width .4s}
+.chp,.cmch{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}.chp span,.cmch span{font-size:11px;background:rgba(0,0,0,.07);border-radius:8px;padding:2px 7px;color:var(--ink);white-space:nowrap}
+.cmg{display:flex;gap:6px;margin:6px 0}.cmg button{flex:1;min-width:0;border:0;border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;padding:8px 2px}.cmg button.on{background:var(--acc);color:#fff}
+.cmo{position:fixed;inset:0;z-index:9400;display:flex;align-items:flex-end;justify-content:center;background:rgba(20,35,15,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.cms{width:100%;max-width:480px;max-height:86vh;overflow-y:auto;background:var(--card);border-radius:22px 22px 0 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom,0px));animation:lgu .25s}
+.cmfm{border-radius:14px;padding:14px 10px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:linear-gradient(#bfe6ff 0 18%,#9ad46f 18%,#5fae3d)}
+.cmfm span{font-size:30px;line-height:1;position:relative}.cmfm sup{font-size:10px;background:rgba(0,0,0,.55);color:#fff;border-radius:6px;padding:0 4px;position:absolute;right:-10px;bottom:-4px}
+.pet{border-radius:18px;padding:12px;margin-bottom:10px;background:linear-gradient(150deg,var(--card),rgba(255,213,74,.22));box-shadow:0 1px 4px rgba(0,0,0,.14);border:1.5px solid rgba(224,161,0,.35)}
+.pth{display:flex;gap:10px;align-items:center}.pav{font-size:44px;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,213,74,.35);flex:none}
+.pti{min-width:0}.pti b{display:block;font-size:16px}.pti small{color:var(--mut);font-size:12px;line-height:1.3;display:block}
+.pst{margin:10px 0 8px;display:grid;gap:7px}.pr{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center}.pr i{font-style:normal;font-size:17px;text-align:center}.pr small{display:block;font-size:11px;color:var(--mut);margin-bottom:2px}.pr b{font-size:12px;text-align:right;max-width:120px}
+.chk{padding:0 10px 8px}.chk[hidden],.chk [hidden]{display:none!important}.chk .bar{padding:6px 4px}
+@keyframes dgw{0%{left:5%;transform:scaleX(1)}49%{left:78%;transform:scaleX(1)}50%{left:78%;transform:scaleX(-1)}99%{left:5%;transform:scaleX(-1)}100%{left:5%;transform:scaleX(1)}}
+.tp{background:rgba(255,213,74,.22)}.tp small{color:var(--ink);font-size:12.5px;line-height:1.3}
 </style>
 </head>
 <body>
@@ -181,17 +208,17 @@ requestAnimationFrame(f);
 setTimeout(function(){if(!done&&window.__ready&&sc()>=.999)fin()},6000)})();
 </script>
 <div class="scene"><div class="sun" id="sun">☀️</div><button class="mub" id="mu" aria-label="Звук">🔊</button><button class="mub" id="th" style="left:52px" aria-label="Тема">🌙</button><button class="mub" id="lg" style="left:94px" aria-label="Language">🌐</button><button class="mub" id="mo" style="left:136px" aria-label="Ещё">🎁</button><button class="mub" id="tq" style="left:178px" aria-label="Обучение">❓</button><div class="cl c1">☁️</div><div class="cl c2">☁️</div><div class="h1"></div><div class="h2"></div><div class="wk" id="wkC" style="display:none;pointer-events:auto;font-size:26px;bottom:6px"><i>🐈</i></div><div class="wk" id="wkM"><svg class="pp" viewBox="0 0 24 44" width="17" height="29"><g class="ar a1"><rect x="3.5" y="16" width="3.5" height="12" rx="1.7" fill="#f2c9a0"/></g><g class="lg l1"><rect x="8" y="28" width="3.6" height="13" rx="1.5" fill="#6b4a2b"/><rect x="7.5" y="40" width="5" height="3" rx="1.5" fill="#333"/></g><g class="lg l2"><rect x="12.4" y="28" width="3.6" height="13" rx="1.5" fill="#6b4a2b"/><rect x="11.9" y="40" width="5" height="3" rx="1.5" fill="#333"/></g><rect x="7" y="15" width="10" height="15" rx="3" fill="#3f7fd0"/><g class="ar a2"><rect x="17" y="16" width="3.5" height="12" rx="1.7" fill="#f2c9a0"/></g><circle cx="12" cy="10" r="5" fill="#f2c9a0"/><ellipse cx="12" cy="6.5" rx="10" ry="2.4" fill="#d9a441"/><path d="M6.5 6.5Q12-3 17.5 6.5Z" fill="#e9b94f"/></svg></div><div class="wk" id="wkW"><svg class="pp" viewBox="0 0 24 44" width="17" height="29"><path d="M6 10Q6 1 12 2Q18 1 18 10L19.5 21 4.5 21Z" fill="#7a4a21"/><g class="ar a1"><rect x="3.5" y="16" width="3" height="11" rx="1.5" fill="#f2c9a0"/></g><g class="lg l1"><rect x="9" y="30" width="3" height="11" rx="1.4" fill="#f2c9a0"/><rect x="8.5" y="40" width="4.5" height="3" rx="1.5" fill="#a02040"/></g><g class="lg l2"><rect x="12.5" y="30" width="3" height="11" rx="1.4" fill="#f2c9a0"/><rect x="12" y="40" width="4.5" height="3" rx="1.5" fill="#a02040"/></g><g class="ar a2"><rect x="17.5" y="16" width="3" height="11" rx="1.5" fill="#f2c9a0"/></g><path d="M8 15H16L19 32H5Z" fill="#e0556b"/><circle cx="12" cy="10" r="5" fill="#f2c9a0"/><path d="M7 9Q12 3 17 9Q13 7 7 9Z" fill="#7a4a21"/></svg></div>
-<div class="dec" style="left:8%">🌳</div><div class="dec" style="left:22%;font-size:40px">🏡</div><div class="dec" style="right:12%">🌲</div><div class="dec" style="right:28%;font-size:22px">🌾</div>
+<div class="wk" id="wkD" style="display:none;animation:dgw 16s linear infinite"><i>🐕</i></div><div class="dec" style="left:8%">🌳</div><div class="dec" style="left:22%;font-size:40px">🏡</div><div class="dec" style="right:12%">🌲</div><div class="dec" style="right:28%;font-size:22px">🌾</div>
 <div class="sn" style="left:8%">❄️</div><div class="sn" style="left:25%;animation-delay:-2s">❄️</div><div class="sn" style="left:42%;animation-delay:-4s">❄️</div><div class="sn" style="left:58%;animation-delay:-1s">❄️</div><div class="sn" style="left:75%;animation-delay:-3s">❄️</div><div class="sn" style="left:90%;animation-delay:-5s">❄️</div><div id="dcs"></div><div class="dr" style="left:5%;animation-delay:-0.0s"></div><div class="dr" style="left:14%;animation-delay:-0.2s"></div><div class="dr" style="left:23%;animation-delay:-0.3s"></div><div class="dr" style="left:32%;animation-delay:-0.5s"></div><div class="dr" style="left:41%;animation-delay:-0.1s"></div><div class="dr" style="left:50%;animation-delay:-0.3s"></div><div class="dr" style="left:59%;animation-delay:-0.4s"></div><div class="dr" style="left:68%;animation-delay:-0.6s"></div><div class="dr" style="left:77%;animation-delay:-0.2s"></div><div class="dr" style="left:86%;animation-delay:-0.3s"></div><div class="dr" style="left:95%;animation-delay:-0.5s"></div><div class="hud"><div class="cnt" id="c"></div><div class="ps" id="ps"></div><div class="ps" id="se"></div></div></div>
-<section id="t0"><div class="row bar" id="bsc"><span class="em">🚀</span><div class="inf"><b id="bsT">Ускорение ×2</b><small id="bsS"></small></div><button class="b g" id="bsB">📺 Включить</button></div><div class="row bar" id="mgc"><span class="em">🎮</span><div class="inf"><b>Мини-игры</b><small id="mgS"></small></div><button class="b g" id="mgF">🎣 Рыбалка</button><button class="b g" id="mgE">🧺 Яйца</button></div><div class="row" style="padding:10px"><b>🎪 Ещё мини-игры</b><small id="mg2S" style="display:block;color:var(--mut);margin:2px 0 8px"></small><div style="display:flex;gap:8px"><button class="b g" style="flex:1;min-width:0" id="mgM">🧩 3 в ряд</button><button class="b g" style="flex:1;min-width:0" id="mgSh">✂️ Стрижка</button><button class="b g" style="flex:1;min-width:0" id="mgCh">🐔 Поймай</button></div></div><div class="row" id="chc" hidden style="padding:10px"><b>🐾 Характеры животных</b><div class="bar chi" id="chE" hidden><span class="em" id="chEe"></span><div class="inf"><b id="chEt"></b><small id="chEs"></small></div><button class="b g" id="chEb"></button></div><div id="cxL"></div></div><div class="row bar" id="whc"><span class="em">🎡</span><div class="inf"><b>Колесо фортуны</b><small id="whS"></small></div><button class="b g" id="whB">🎡 Крутить</button></div><div class="row bar" id="trc"><span class="em" id="trE">🌱</span><div class="inf"><b id="trT">Родовое дерево</b><small id="trS"></small></div><button class="b g" id="trB">🌱 Посадить</button></div><div class="row bar" id="chc"><span class="em">📜</span><div class="inf"><b>Летопись фермы</b><small id="chS"></small></div><button class="b g" id="chB">Открыть</button></div></section>
-<section id="t1" hidden><div class="row" id="mer" hidden><div class="bar"><span class="em">🧳</span><div class="inf"><b>Странствующий торговец</b><small id="merT"></small></div></div><div id="merD"></div></div><div class="row bar" id="barn"><span class="em">🏚</span><div class="inf"><b id="bnT"></b><small id="bnS"></small></div><button class="b g" id="bnB"></button></div><h3>Животные · покупка по одному</h3><div id="shA"></div><h3>Корм</h3><button class="b g" id="fAll" style="width:100%;padding:12px;font-size:14px">🌾 Накормить все загоны</button><div class="ft">Без корма животные не дают товар. Корм для одного загона — кнопка в самом загоне.</div><h3>Улучшения загонов · 🥣 корм −30% · 💉 без болезней · 🧥 без зимних штрафов</h3><div id="upg"></div><h3>Украшения фермы · повышают капитал · после покупки можно показать или скрыть</h3><div id="dcl"></div></section>
+<section id="t0"><div class="row bar" id="bsc"><span class="em">🚀</span><div class="inf"><b id="bsT">Ускорение ×2</b><small id="bsS"></small></div><button class="b g" id="bsB">📺 Включить</button></div><div class="row bar" id="mgc"><span class="em">🎮</span><div class="inf"><b>Мини-игры</b><small id="mgS"></small></div><button class="b g" id="mgF">🎣 Рыбалка</button><button class="b g" id="mgE">🧺 Яйца</button></div><div class="row" style="padding:10px"><b>🎪 Ещё мини-игры</b><small id="mg2S" style="display:block;color:var(--mut);margin:2px 0 8px"></small><div style="display:flex;gap:8px"><button class="b g" style="flex:1;min-width:0" id="mgM">🧩 3 в ряд</button><button class="b g" style="flex:1;min-width:0" id="mgSh">✂️ Стрижка</button><button class="b g" style="flex:1;min-width:0" id="mgCh">🐔 Поймай</button></div></div><div class="row bar" id="whc"><span class="em">🎡</span><div class="inf"><b>Колесо фортуны</b><small id="whS"></small></div><button class="b g" id="whB">🎡 Крутить</button></div><div class="row bar" id="trc"><span class="em" id="trE">🌱</span><div class="inf"><b id="trT">Родовое дерево</b><small id="trS"></small></div><button class="b g" id="trB">🌱 Посадить</button></div><div class="row bar" id="chr"><span class="em">📜</span><div class="inf"><b>Летопись фермы</b><small id="chS"></small></div><button class="b g" id="chB">Открыть</button></div></section>
+<section id="t1" hidden><div class="row" id="mer" hidden><div class="bar"><span class="em">🧳</span><div class="inf"><b>Странствующий торговец</b><small id="merT"></small></div></div><div id="merD"></div></div><div class="row bar" id="barn"><span class="em">🏚</span><div class="inf"><b id="bnT"></b><small id="bnS"></small></div><button class="b g" id="bnB"></button></div><h3>Животные · покупка по одному</h3><div id="shA"></div><h3 id="shPH"></h3><div id="shP"></div><h3>Корм</h3><button class="b g" id="fAll" style="width:100%;padding:12px;font-size:14px">🌾 Накормить все загоны</button><div class="ft">Без корма животные не дают товар. Корм для одного загона — кнопка в самом загоне.</div><h3>Улучшения загонов · 🥣 корм −30% · 💉 без болезней · 🧥 без зимних штрафов</h3><div id="upg"></div><h3>Украшения фермы · повышают капитал · после покупки можно показать или скрыть</h3><div id="dcl"></div></section>
 <section id="t2" hidden><h3>Заказ покупателя</h3><div class="row bar"><span class="em">🧑‍🌾</span><div class="inf"><b id="oT"></b><small id="oS"></small></div><button class="b g" id="oB">Отдать</button></div><div style="text-align:right;margin-bottom:6px"><button class="b" id="oN" style="min-width:0;font-size:12px;padding:6px 10px">Другой заказ</button></div><h3>Рынок · цены меняются</h3><div id="mk"></div><button class="b g" id="sAll" style="width:100%;padding:12px;font-size:14px">Продать всё</button><h3>🧑‍🌾 Продажа животных другим фермерам</h3><div id="fmk"></div><div class="ft">Продавать можно лишних животных: один в загоне остаётся всегда. Цена — 40% от цены покупки и зависит от спроса на рынке.</div><div class="ft"><button id="rs">Начать заново</button></div></section>
-<section id="t3" hidden><div class="row" id="cl" hidden style="padding:12px"><b>☁️ Облачное сохранение</b><small id="clS" style="display:block;color:var(--mut);margin:4px 0 8px"></small><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="b g" id="clP">☁️ Включить</button><button class="b" id="clK">🔑 Мой код</button><button class="b" id="clR">Восстановить</button></div></div><div class="row" id="wr" hidden style="padding:12px"><b>🌍 Мировой рейтинг</b><div id="wrL" style="margin:6px 0"></div><button class="b" id="wrB">Обновить</button></div><div class="row bar me"><div class="inf"><div class="big" id="rk"></div><small id="rkS"></small></div><span class="em">🏆</span></div>
-<div style="display:flex;gap:8px;margin-bottom:10px"><input class="nm" id="nm" maxlength="16" placeholder="Название фермы"><button class="b" id="nmB">OK</button></div>
+<section id="t3" hidden><div class="cmt" id="cmT"></div><div id="rtM"><div class="row" id="cl" hidden style="padding:12px"><b>☁️ Облачное сохранение</b><small id="clS" style="display:block;color:var(--mut);margin:4px 0 8px"></small><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="b g" id="clP">☁️ Включить</button><button class="b" id="clK">🔑 Мой код</button><button class="b" id="clR">Восстановить</button></div></div><div class="row" id="wr" hidden style="padding:12px"><b>🌍 Мировой рейтинг</b><div id="wrL" style="margin:6px 0"></div><button class="b" id="wrB">Обновить</button></div><div class="row bar me"><div class="inf"><div class="big" id="rk"></div><small id="rkS"></small></div><span class="em">🏆</span></div>
+<div style="display:flex;gap:8px;margin-bottom:10px"><input class="nm" id="nm" maxlength="16" placeholder="Ваше имя"><button class="b" id="nmB">OK</button></div>
 <button class="b g" id="dg" style="width:100%;padding:12px;font-size:14px"></button>
 <h3>Ярмарка</h3><div class="row"><div class="bar"><span class="em">🎪</span><div class="inf"><b id="frT"></b><small id="frS"></small></div></div><div style="display:flex;gap:8px;padding:0 12px 10px"><select id="fSel" class="nm"></select><button class="b g" id="fB">Выставить</button></div></div>
 
-<h3>Соревнование недели</h3><div class="row bar"><div class="inf"><b id="wkT"></b><small id="wkS"></small></div><span class="em">🏁</span></div><h3>Топ фермеров (капитал = деньги + стоимость животных)</h3><div class="row" id="lb"></div><h3>Достижения</h3><div id="acs"></div><h3>Сохранение · код для переноса фермы</h3><textarea id="svc" class="nm" rows="3" style="width:100%;font-size:11px" placeholder="Нажмите «Получить код» или вставьте код сюда"></textarea><div style="display:flex;gap:8px;margin-top:6px"><button class="b" id="svE" style="flex:1">📋 Получить код</button><button class="b g" id="svI" style="flex:1">Загрузить код</button></div><div class="ft">Версия <span id="ver"></span> · <a href="privacy.html" target="_blank" rel="noopener" style="color:inherit">Политика конфиденциальности</a> · <a href="mailto:kubeshcon@gmail.com" style="color:inherit">kubeshcon@gmail.com</a></div></section>
+<h3>Соревнование недели</h3><div class="row bar"><div class="inf"><b id="wkT"></b><small id="wkS"></small></div><span class="em">🏁</span></div><h3>Топ фермеров (капитал = деньги + стоимость животных)</h3><div class="row" id="lb"></div><h3>Достижения</h3><div id="acs"></div><h3>Сохранение · код для переноса фермы</h3><textarea id="svc" class="nm" rows="3" style="width:100%;font-size:11px" placeholder="Нажмите «Получить код» или вставьте код сюда"></textarea><div style="display:flex;gap:8px;margin-top:6px"><button class="b" id="svE" style="flex:1">📋 Получить код</button><button class="b g" id="svI" style="flex:1">Загрузить код</button></div><div class="ft">Версия <span id="ver"></span> · <a href="privacy.html" target="_blank" rel="noopener" style="color:inherit">Политика конфиденциальности</a> · <a href="mailto:kubeshcon@gmail.com" style="color:inherit">kubeshcon@gmail.com</a></div></div><div id="cmP" hidden><div id="cp0" hidden></div><div id="cp1" hidden></div><div id="cp2" hidden></div></div></section>
 <section id="t4" hidden><h3>Огород · запас корма: <span id="gf"></span></h3><div id="seeds" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px"></div><div class="plots" id="plots"></div><h3 style="margin-top:18px">💎 Элитный огород</h3><div class="plots" id="plots2"></div><div class="ft">Урожай — бесплатный корм для всех загонов. Выберите семена и коснитесь грядки. Зимой сажать нельзя. Элитный огород: рост ×2, урожай ×2, теплица работает и зимой.</div></section>
 <section id="t6" hidden><h3 id="stH"></h3><div id="stL"></div><h3 id="dqH"></h3><div id="dqL"></div><h3>🎟️ Сезонный пропуск</h3><div id="spL"></div><h3>🏗️ Постройки</h3><div id="bdL"></div><h3>🐈 Питомец</h3><div id="ctL"></div><h3>📚 Коллекции</h3><div id="clL"></div></section>
 <section id="t5" hidden><div class="row bar"><span class="em">📈</span><div class="inf"><b id="pcT"></b><small id="pcS"></small><div style="height:8px;border-radius:4px;background:var(--bg);margin-top:6px;overflow:hidden"><div id="pcB" style="height:100%;width:0;background:var(--acc)"></div></div></div></div><h3>Земли · покупаются за деньги</h3><div id="lands"></div><h3>Энциклопедия <span id="enP"></span></h3><div id="enc"></div><div class="ft">Коснитесь открытой записи, чтобы прочитать интересный факт.</div></section>
@@ -201,7 +228,7 @@ setTimeout(function(){if(!done&&window.__ready&&sc()>=.999)fin()},6000)})();
 /*IIFE*/(function(){
 /* ☁️ Облако (Supabase): вставьте адрес проекта и публичный ключ anon. Пусто = облако выключено */
 var CLOUD_URL="",CLOUD_KEY="";
-var VER=4,GAME_VERSION="1.0.9",MIGR={};
+var VER=4,GAME_VERSION="1.2.0",MIGR={};
 var SALT="fm#9Qz!2026-kX",TP=0;
 function hs(t){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0,c;i<t.length;i++){c=t.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return(4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
 function sg(t){return hs(SALT+t+SALT.split("").reverse().join(""))}
@@ -294,11 +321,11 @@ d.style.bottom=(2+Math.random()*16)+"px";d.onclick=function(){tap(i,p.x)};x.pen.
 function tap(i,px){if(S.sk[i]){msg(i,px,"Больны 🤒");return}var rm=capU()-S.r[i];if(rm<.05){msg(i,px,"Амбар полон! 📦");return}var u=Math.min(tapV(i),S.fd[i]/fk(i),rm);if(u<.05){msg(i,px,"Нет корма 🌾");return}S.fd[i]-=u*fk(i);var pu=u*chM(i);S.r[i]+=pu;if(window.__qa)window.__qa("tap");msg(i,px,A[i].s+" +"+fq(pu)+A[i].re);if(chG(i)&&Math.random()<.1){var gg=val(i)*5;S.c+=gg;S.earn+=gg;S.wk+=gg;setTimeout(function(){msg(i,px+20,"👑 +"+mf(gg))},250)}}
 function buyFeed(i){var n=S.l[i];if(!n)return false;var k=bt(i),t=Math.min(S.gf,k),c=(k-t)*fp(i);if(S.c<c)return false;S.c-=c;S.gf-=t;S.fd[i]+=k;return true}
 A.forEach(function(a,i){
-var d=mk("row pw","<div class='pen'><div class='fdl'></div></div><div class='bar'><div class='inf'><b></b><small></small></div><button class='b g'></button><button class='b' style='background:#d04a4a;display:none'></button></div>"),pen=d.children[0];
+var d=mk("row pw","<div class='pen'><div class='fdl'></div></div><div class='bar'><div class='inf'><b></b><small></small></div><button class='b g'></button><button class='b' style='background:#d04a4a;display:none'></button></div><div class='chk' hidden><div class='bar chi' hidden><span class='em'></span><div class='inf'><b></b><small></small></div><button class='b g'></button></div><div class='cl'></div></div>"),pen=d.children[0];
 pen.style.background=a.bg;
 for(var k=0;k<7;k++){var s=document.createElement("span");s.className="dc";s.textContent=a.dec[k%a.dec.length];s.style.left=(Math.random()*92)+"%";s.style.bottom=(Math.random()*14)+"px";s.style.fontSize=(12+Math.random()*8)+"px";pen.appendChild(s)}
-R.push({d:d,pen:pen,p:[],bb:[],rs:[],cw:[],t:d.querySelector("b"),s:d.querySelector("small"),f:d.querySelector("button"),c:d.querySelectorAll(".bar button")[1],l:pen.querySelector(".fdl"),hu:false});
-R[i].f.onclick=function(){buyFeed(i)};R[i].c.onclick=function(){var c=cure(i);if(S.sk[i]&&S.c>=c){S.c-=c;S.sk[i]=0;toast("💊 "+A[i].n+" вылечены!")}};$("t0").appendChild(d);
+R.push({d:d,pen:pen,p:[],bb:[],rs:[],cw:[],t:d.querySelector("b"),s:d.querySelector("small"),f:d.querySelector("button"),c:d.querySelectorAll(".bar button")[1],l:pen.querySelector(".fdl"),ck:d.querySelector(".chk"),hu:false});
+R[i].f.onclick=function(){buyFeed(i)};R[i].ck.querySelector("button").onclick=chBuy;R[i].c.onclick=function(){var c=cure(i);if(S.sk[i]&&S.c>=c){S.c-=c;S.sk[i]=0;toast("💊 "+A[i].n+" вылечены!")}};$("t0").appendChild(d);
 var sh=mk("row bar","<span class='em'>"+ico(a,30)+"</span><div class='inf'><b></b><small></small></div><button class='b'></button>");
 Sh.push({d:sh,t:sh.querySelector("b"),s:sh.querySelector("small"),b:sh.querySelector("button")});
 Sh[i].b.onclick=function(){var k=cost(i);if(S.c>=k){S.c-=k;S.l[i]++;if(S.l[i]===1)S.fd[i]+=20;chRoll(i);if(window.__qa)window.__qa("buy");save()}};$("shA").appendChild(sh);
@@ -344,17 +371,17 @@ if(!S.evn)S.evn=S.pt+180000;
 if(S.ev){if(!CHD[S.ev.k]||S.pt>=S.ev.u){if(CHD[S.ev.k])toast("👋 "+CHD[S.ev.k].n+" уехала домой");S.ev=null;S.evn=S.pt+600000}}
 else if(S.pt>=S.evn){var c2=Object.keys(CHD).filter(function(k){return CHD[k].rare&&!chOwn(k)&&S.l[CHD[k].sp]>=3});
 if(c2.length){var k2=c2[Math.floor(Math.random()*c2.length)];S.ev={k:k2,u:S.pt+240000};cr(CHD[k2].ev+": на ферму приехала "+CHD[k2].n);toast(CHD[k2].ev+"! "+CHD[k2].n+" гостит на ферме")}else S.evn=S.pt+300000}}
-$("chEb").onclick=function(){if(!S.ev||!CHD[S.ev.k])return;var d=CHD[S.ev.k],p=chPrice(d.sp);if(S.c<p)return;S.c-=p;S.l[d.sp]++;if(S.l[d.sp]===1)S.fd[d.sp]+=20;chNew(S.ev.k);cr("🌈 Редкая порода на ферме: "+d.n+" ("+A[d.sp].n+")");toast("🎉 "+d.e+" "+d.n+" теперь живёт на вашей ферме!");S.ev=null;S.evn=S.pt+600000;save()};
+function chBuy(){if(!S.ev||!CHD[S.ev.k])return;var d=CHD[S.ev.k],p=chPrice(d.sp);if(S.c<p)return;S.c-=p;S.l[d.sp]++;if(S.l[d.sp]===1)S.fd[d.sp]+=20;chNew(S.ev.k);cr("🌈 Редкая порода на ферме: "+d.n+" ("+A[d.sp].n+")");toast("🎉 "+d.e+" "+d.n+" теперь живёт на вашей ферме!");S.ev=null;S.evn=S.pt+600000;save()}
 var chSig="",chSp="";
 function chSprites(){R.forEach(function(x,i){x.cw.forEach(function(p){p.d.remove()});x.cw=[];
 S.ch.filter(function(c){return CHD[c.k].sp===i}).forEach(function(c){var d=CHD[c.k],a=A[i],sp=document.createElement("span");sp.innerHTML=ico(a,36);if(d.f==="rb")sp.style.filter="sepia(1) saturate(6) hue-rotate("+(c.x*37%360||200)+"deg)";else sp.style.filter=d.f.replace(/drop-shadow\([^)]*\)/g,"").trim()||"none";
 var el=mk("pair",""),lb=document.createElement("span");el.appendChild(sp);lb.className="cn";lb.textContent=d.e+" "+d.n;el.appendChild(lb);
 var p={d:el,l:lb,x:Math.random()*150,vx:(Math.random()<.5?-1:1)*a.v*.8,w:0,ph:Math.random()*6};el.style.bottom=(2+Math.random()*10)+"px";el.style.zIndex=2;el.onclick=function(){tap(i,p.x)};x.pen.appendChild(el);x.cw.push(p)})})}
-function chUI(){var vis=S.ch.length>0||!!S.ev;$("chc").hidden=!vis;if(!vis){if(chSp){chSp="";chSprites()}return}
-$("chE").hidden=!S.ev;if(S.ev&&CHD[S.ev.k]){var d=CHD[S.ev.k],p=chPrice(d.sp);$("chEe").textContent=d.e;$("chEt").textContent=d.ev+" · "+d.n;$("chEs").textContent="Редкая порода гостит ещё "+Math.max(0,Math.ceil((S.ev.u-S.pt)/1000))+" с · бонус +"+Math.round(Math.min(d.b,.2)*100)+"%";$("chEb").textContent="Взять "+mf(p);$("chEb").disabled=S.c<p}
-var sp=S.ch.map(function(c){return c.k}).join(",");if(sp!==chSp){chSp=sp;chSprites()}
-var sg=S.ch.map(function(c){return c.k+(c.lv||1)+(c.kd||0)}).join(",");if(sg!==chSig){chSig=sg;var L=$("cxL");L.innerHTML="";S.ch.forEach(function(c){var d=CHD[c.k],v=Math.round(chLm(c)*100);
-L.appendChild(mk("bar chi"+(d.rare?" rare":""),"<span class='em'>"+A[d.sp].e+d.e+"</span><div class='inf'><b>"+d.n+(d.kid?"":" · ур."+(c.lv||1))+(d.rare?" ✨":"")+"</b><small>"+d.t+" · "+(v<0?"−"+(-v):"+"+v)+"% товара"+(d.kid?" · малыши "+(c.kd||0)+"/5":"")+"</small></div>"))})}}
+function chUI(){var ev=S.ev&&CHD[S.ev.k]?S.ev:null;
+A.forEach(function(a,i){var k=R[i].ck,cs=S.ch.filter(function(c){return CHD[c.k]&&CHD[c.k].sp===i}),e=ev&&CHD[ev.k].sp===i?CHD[ev.k]:null;k.hidden=!cs.length&&!e;if(k.hidden)return;
+var eb=k.children[0];eb.hidden=!e;if(e){var p=chPrice(i),bt=eb.querySelector("button");eb.children[0].textContent=e.e;eb.querySelector("b").textContent=e.ev+" · "+e.n;eb.querySelector("small").textContent="Редкая порода гостит ещё "+Math.max(0,Math.ceil((ev.u-S.pt)/1000))+" с · бонус +"+Math.round(Math.min(e.b,.2)*100)+"%";bt.textContent="Взять "+mf(p);bt.disabled=S.c<p}
+var sg=cs.map(function(c){return c.k+(c.lv||1)+(c.kd||0)}).join();if(k._s!==sg){k._s=sg;k.children[1].innerHTML=cs.map(function(c){var d=CHD[c.k],v=Math.round(chLm(c)*100);return "<div class='bar chi"+(d.rare?" rare":"")+"'><span class='em'>"+a.e+d.e+"</span><div class='inf'><b>"+d.n+(d.kid?"":" · ур."+(c.lv||1))+(d.rare?" ✨":"")+"</b><small>"+d.t+" · "+(v<0?"−"+(-v):"+"+v)+"% товара"+(d.kid?" · малыши "+(c.kd||0)+"/5":"")+"</small></div></div>"}).join("")}});
+var sp=S.ch.map(function(c){return c.k}).join(",");if(sp!==chSp){chSp=sp;chSprites()}}
 chFix();
 /* 🚀 ускорение за рекламу */
 function boUI(){var r=Math.max(0,(S.bu||0)-Date.now()),on=r>0,x=Math.ceil(r/1000),full=r>=1500000;
@@ -416,16 +443,16 @@ function spawn(){if(document.hidden||MGON)return;var g=mk("gold","🌟");g.style
 function fox(){if($("t0").hidden||document.hidden||MGON)return;var o=[];S.l.forEach(function(n,i){if(n>=2)o.push(i)});if(!o.length)return;
 var i=o[Math.floor(Math.random()*o.length)],f=mk("fox","<img src='"+WOLFU+"' alt=''>");f.style.bottom=(2+Math.random()*10)+"px";
 f.onclick=function(){f.remove();var g=val(i)*Math.max(3,S.l[i]*.5);S.c+=g;S.fx++;if(window.__qa)window.__qa("wolf");toast("🐺 Волка прогнали! +"+mf(g))};
-f.onanimationend=function(){if(!f.parentNode)return;f.remove();var x=R[i];if(x.bb.length){var b=x.bb.pop();b.d.remove();toast("🐺 Волк утащил малыша!")}else if(S.l[i]>1){S.l[i]--;toast("🐺 Волк утащил "+ACC[i]+"!")}else toast("🐺 Волк убежал ни с чем")};
-R[i].pen.appendChild(f);toast("🐺 Волк в загоне: "+A[i].n+"! Прогоните его!")}
-var ACC=["курицу","кролика","барана","индюка","корову","лошадь","козу","ламу","верблюда","бизона","единорога","пчелу","фламинго","белку","медведя","жирафа","слона"];
+f.onanimationend=function(){if(!f.parentNode)return;f.remove();var x=R[i];if(x.bb.length){var b=x.bb.pop();b.d.remove();toast("🐺 Волк утащил малыша!")}else if(S.l[i]>1){S.l[i]--;toast("🐺 Волк утащил "+(ACC[i]||A[i].n)+"!")}else toast("🐺 Волк убежал ни с чем")};
+R[i].pen.appendChild(f);if(S.dgo){toast("🐕 Пёс бежит ловить волка!");setTimeout(function(){if(!f.parentNode)return;f.remove();var g=val(i)*Math.max(3,S.l[i]*.5)*1.5;S.c+=g;S.fx++;S.dgk=(S.dgk||0)+1;if(window.__qa)window.__qa("wolf");toast("🐕 Пёс поймал волка! +"+mf(g))},2200)}else toast("🐺 Волк в загоне: "+A[i].n+"! Коснитесь его или купите пса 🐕")}
+var ACC=["курицу","кролика","барана","индюка","корову","лошадь","козу","ламу","верблюда","бизона","единорога","пчелу","фламинго","белку","медведя","жирафа","слона","панду","тигра","павлина","оленя","ежа","лебедя","зебру","носорога","бегемота","попугая","ленивца","аллигатора"];
 (function fs(){setTimeout(function(){fox();fs()},70000+Math.random()*50000)})();setTimeout(fox,60000);
 $("rs").onclick=function(){if(confirm(tr("Удалить весь прогресс?"))){S=fresh();R.forEach(function(x){x.p.concat(x.bb,x.rs).forEach(function(p){p.d.remove()});x.p=[];x.bb=[];x.rs=[]});PM=A.map(function(a,i){return mult(i)});gen();save()}};
 function mb(a){return function(){var t=a+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
 var rg=mb(1337),FN=["Иван","Пётр","Анна","Мария","Олег","Света","Игорь","Лена","Макс","Дима","Катя","Тимур","Нина","Артём","Зоя","Фёдор","Алла","Борис","Вера","Глеб"],FM=["Берёзки","Зелёный луг","Три дуба","Солнечная","Ромашка","Речная","Золотой колос","Тихая заводь","Красная гора","Лесной хутор","Белая овца","Ясная поляна","Медовая","Весёлый двор","Горная"];
 var NBOT=124567,BC=new Float64Array(NBOT),BG=new Float64Array(NBOT),CA=new Float64Array(NBOT),SRT=new Float64Array(NBOT);
 for(var bi=0;bi<NBOT;bi++){var u=Math.max(1/NBOT,rg());BC[bi]=20*Math.pow(1/u,1.65);BG[bi]=.02+rg()*.18}
-function botName(k){var h=Math.imul(k+1,2654435761)>>>0;return FN[h%FN.length]+" · "+FM[(h>>>7)%FM.length]+" "+((h>>>13)%9000+100)}
+var NMS=["James","Emily","Michael","Sophia","Ethan","Olivia","Jacob","Emma","Daniel","Ava","Ryan","Mia","Tyler","Chloe","Jason","Иван","Анна","Пётр","Мария","Олег","Света","Игорь","Лена","Макс","Катя","Тимур","Нина","Артём","Зоя","Фёдор","Алла","Борис","Вера","Глеб","李伟","王芳","张敏","刘洋","陈静","杨磊","赵雪","黄涛","周婷","吴强","Wei","Mei","Jun","Ahmed","Fatima","Omar","Layla","Hassan","Zainab","محمد","فاطمة","أحمد","ليلى","عمر","نور","يوسف","سارة"];function botName(k){var h=Math.imul(k+1,2654435761)>>>0;return NMS[(h>>>8)%NMS.length]}
 var STRONG=(function(){var t=new Float64Array(BC);t.sort();var thr=t[NBOT-2000],o=[];for(var k=0;k<NBOT;k++)if(BC[k]>=thr)o.push(k);return o})();
 var EP=Date.UTC(2026,9,1);
 function botCap(k){return BC[k]*(1+BG[k]*(Date.now()-EP)/864e5)}
@@ -1044,7 +1071,7 @@ function ctLv(){return Math.min(10,1+Math.floor((S.ck||0)/25))}
 function ctNext(){return Date.now()+((S.cm||0)>Date.now()?22000:45000)*(1-.04*(ctLv()-1))+Math.random()*15000}
 function ctAdopt(){if(S.ct)return;if(S.c<CATC){toast(T("Не хватает денег","Not enough money","金钱不足"));return}S.c-=CATC;S.ct=1;S.cn=ctNext();toast(T("🐈 Кошка поселилась на ферме!","🐈 A cat moved onto the farm!","🐈 一只猫搬到了农场!"));save()}
 function ctPet(){if(!S.ct)return;var n=Date.now();S.cm=Math.min(Math.max(S.cm||0,n)+20000,n+120000);S.cn=Math.min(S.cn,ctNext());toast(T("💗 Мур-р! Кошка довольна","💗 Purr! The cat is happy","💗 呼噜噜!猫咪很开心"))}
-$("wkC").onclick=ctPet;
+$("wkC").onclick=ctPet;window.__cat={CATC:CATC,ctLv:ctLv,ctAdopt:ctAdopt,ctPet:ctPet};
 $("mo").onclick=function(e){e.stopPropagation();document.querySelectorAll("nav button").forEach(function(c){c.classList.remove("on")});for(var i=0;i<7;i++)$("t"+i).hidden=i!==6;scrollTo(0,0);cache={};render()};
 setInterval(function(){if(!S.ct||document.hidden)return;var n=Date.now();if(n<S.cn)return;
  var g=Math.max(1,Math.round(psV()*2));S.c+=g;S.ck=(S.ck||0)+1;if(window.__qa)window.__qa("cat");S.cn=ctNext();toast(T("🐈 Кошка поймала мышь: +","🐈 The cat caught a mouse: +","🐈 猫咪抓到一只老鼠:+")+mf(g));save()},1000);
@@ -1065,7 +1092,7 @@ stN:{ru:"Серия: {n} дн. · рекорд {b}",en:"Streak: {n} days · best
 stC:{ru:"Забрать награду дня",en:"Claim today's reward",zh:"领取今日奖励",es:"Reclamar la recompensa de hoy",fr:"Récupérer la récompense du jour",hi:"आज का इनाम लें",ar:"استلم مكافأة اليوم"},
 stD:{ru:"Награда получена — приходи завтра!",en:"Reward claimed — come back tomorrow!",zh:"奖励已领取,明天再来!",es:"Recompensa reclamada: ¡vuelve mañana!",fr:"Récompense récupérée : revenez demain !",hi:"इनाम ले लिया — कल फिर आएँ!",ar:"تم استلام المكافأة — عُد غدًا!"},
 dqT:{ru:"📋 Ежедневные задания",en:"📋 Daily quests",zh:"📋 每日任务",es:"📋 Misiones diarias",fr:"📋 Quêtes quotidiennes",hi:"📋 दैनिक कार्य",ar:"📋 المهام اليومية"},
-dqS:{ru:"Новые задания каждый день в полночь",en:"New quests every day at midnight",zh:"每天午夜刷新任务",es:"Misiones nuevas cada día a medianoche",fr:"De nouvelles quêtes chaque jour à minuit",hi:"हर रात आधी रात को नए कार्य",ar:"مهام جديدة كل يوم عند منتصف الليل"},
+dqS:{ru:"5 сложных заданий: ★ лёгкие, ★★ средние, ★★★ эпические. Обновляются в полночь",en:"New quests every day at midnight",zh:"每天午夜刷新任务",es:"Misiones nuevas cada día a medianoche",fr:"De nouvelles quêtes chaque jour à minuit",hi:"हर रात आधी रात को नए कार्य",ar:"مهام جديدة كل يوم عند منتصف الليل"},
 clm:{ru:"Забрать",en:"Claim",zh:"领取",es:"Reclamar",fr:"Récupérer",hi:"लें",ar:"استلم"},
 dqB:{ru:"Бонус за все задания: ",en:"Bonus for all quests: ",zh:"完成全部任务奖励:",es:"Bono por todas las misiones: ",fr:"Bonus pour toutes les quêtes : ",hi:"सभी कार्यों का बोनस: ",ar:"مكافأة إتمام كل المهام: "},
 rw:{ru:"Награда: ",en:"Reward: ",zh:"奖励:",es:"Recompensa: ",fr:"Récompense : ",hi:"इनाम: ",ar:"المكافأة: "},
@@ -1073,19 +1100,23 @@ mn:{ru:"мин",en:"min",zh:"分钟",es:"min",fr:"min",hi:"मिनट",ar:"د"
 function y7(k){return x7(S7[k])}
 function dnum(){var d=new Date();return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)}
 function rnd(a,b){return a+Math.floor(Math.random()*(b-a+1))}
-var QK=[["tap",function(){return 40+20*rnd(0,4)},"👆"],["earn",function(){return Math.max(500,Math.round(cap()*.03))},"💵"],["harvest",function(){return rnd(3,6)},"🥕"],["plant",function(){return rnd(3,6)},"🌱"],["mg",function(){return rnd(2,3)},"🎮"],["spin",function(){return 2},"🎡"],["buy",function(){return rnd(3,6)},"🛒"],["cat",function(){return rnd(3,5)},"🐈"],["order",function(){return rnd(2,3)},"🧑‍🌾"],["gold",function(){return rnd(2,3)},"🌟"]];
-function genQ(dn){var pool=QK.filter(function(q){if(q[0]==="cat")return !!S.ct;if(q[0]==="plant"||q[0]==="harvest")return seas()!==3||!!S.g2;return true}),pick=[];
- while(pick.length<3&&pool.length)pick.push(pool.splice(rnd(0,pool.length-1),1)[0]);
- S.dq={k:dn,q:pick.map(function(q){return{k:q[0],n:q[1](),p:0,c:0,e:q[2]}}),b:0};save()}
+var QK=[["tap",function(){return 400+100*rnd(0,8)},"👆",1],["harvest",function(){return rnd(10,16)},"🥕",1],["plant",function(){return rnd(10,16)},"🌱",1],["buy",function(){return rnd(12,25)},"🛒",1],
+["earn",function(){return Math.max(2000,Math.round(cap()*.35))},"💵",2],["mg",function(){return rnd(6,9)},"🎮",2],["spin",function(){return 3},"🎡",2],["cat",function(){return rnd(10,16)},"🐈",2],["order",function(){return rnd(6,10)},"🧑‍🌾",2],["gold",function(){return rnd(6,10)},"🌟",2],["wolf",function(){return rnd(5,8)},"🐺",2],
+["time",function(){return rnd(20,30)},"⏱️",3],["earn",function(){return Math.max(10000,Math.round(cap()*.9))},"💵",3]];
+Object.assign(XT,{time:{ru:"Играть сегодня {n} {минуту|минуты|минут}",en:"Play {n} minutes today",zh:"今天游戏{n}分钟"}});
+function genQ(dn){var P=QK.filter(function(q){if(q[0]==="cat")return !!S.ct;if(q[0]==="plant"||q[0]==="harvest")return seas()!==3||!!S.g2;if(q[0]==="wolf")return S.l.some(function(n){return n>=2});return true}),pick=[];
+[1,1,2,2,3].forEach(function(t){var c=P.filter(function(q){return q[3]===t&&!pick.some(function(p){return p[0]===q[0]})});if(c.length)pick.push(c[rnd(0,c.length-1)])});
+S.dq={k:dn,q:pick.map(function(q){return{k:q[0],n:q[1](),p:0,c:0,e:q[2],t:q[3]}}),b:0,ts:0};save()}
 function dayCheck(){var dn=dnum();
  if(!S.ls||typeof S.ls!=="object"){S.ls={d:dn,n:1,b:1,c:0};save()}
  else if(S.ls.d!==dn){if(dn-S.ls.d===1)S.ls.n++;else if(dn>S.ls.d)S.ls.n=1;if(dn>S.ls.d)S.ls.d=dn;S.ls.b=Math.max(S.ls.b||0,S.ls.n);save()}
  if(!S.dq||!S.dq.q||S.dq.k!==dn)genQ(dn)}
 window.__qa=function(k,n){n=n||1;if(k!=="earn"){if(!S.lt)S.lt={};S.lt[k]=(S.lt[k]||0)+n}if(S.dq&&S.dq.q)S.dq.q.forEach(function(q){if(q.k===k&&!q.c&&q.p<q.n)q.p=Math.min(q.n,q.p+n)})};
 function addXp(v){if(S.sp)S.sp.xp=Math.min(MAXL*XPL,S.sp.xp+v)}
-function qRew(){return Math.max(1500,Math.round(cap()*.012))}
-function dqClaim(i){var q=S.dq&&S.dq.q[i];if(!q||q.c||q.p<q.n)return;q.c=1;var g=qRew();S.c+=g;S.dqd=(S.dqd||0)+1;addXp(20);toast("📋 +"+mf(g));
- if(S.dq.q.every(function(x){return x.c})&&!S.dq.b){S.dq.b=1;var b=Math.max(5000,Math.round(cap()*.03));S.c+=b;addXp(60);toast("🎉 "+y7("dqB")+"+"+mf(b))}save()}
+function qRew(t){t=t||1;return Math.max(1500*t,Math.round(cap()*.012*[0,1.5,3,7][t]))}
+function qBon(){return Math.max(15000,Math.round(cap()*.1))}
+function dqClaim(i){var q=S.dq&&S.dq.q[i];if(!q||q.c||q.p<q.n)return;q.c=1;var g=qRew(q.t);S.c+=g;S.dqd=(S.dqd||0)+1;addXp(20*(q.t||1));toast("📋 +"+mf(g));
+ if(S.dq.q.every(function(x){return x.c})&&!S.dq.b){S.dq.b=1;var b=qBon();S.c+=b;addXp(150);toast("🎉 "+y7("dqB")+"+"+mf(b))}save()}
 function dqPend(){return!!(S.dq&&S.dq.q&&S.dq.q.some(function(x){return x.p>=x.n&&!x.c}))}
 var SD=["💰","🌾","🚀","💰","🌾","🚀","✨"];
 function stIdx(){return((S.ls.n||1)-1)%7}
@@ -1102,8 +1133,8 @@ function stRender(){var dn=dnum(),ls=S.ls,idx=stIdx(),cl=ls.c===dn;
  h+="</div><button class='b g' data-a='stc' style='width:100%' "+(cl?"disabled":"")+">"+(cl?y7("stD"):y7("stC"))+"</button></div>";put("stL",h)}
 function dqRender(){var q=S.dq,h="<div class='row' style='padding:10px 12px 6px'><small style='color:var(--mut)'>"+y7("dqS")+"</small></div>";
  q.q.forEach(function(x,i){var txt=xfmt(x7(XT[x.k]),x.n,x.k==="earn"?mf(x.n):xN(x.n)),pc=Math.round(Math.min(1,x.p/x.n)*100),pr=x.k==="earn"?pc+"% · "+mf(x.n):Math.min(x.p,x.n)+" / "+x.n,ready=x.p>=x.n&&!x.c;
-  h+="<div class='row bar' style='margin-bottom:6px"+(ready?";outline:2px solid #e0a100":"")+"'><span class='em'>"+x.e+"</span><div class='inf'><b style='font-size:14px'>"+esc(txt)+"</b><div style='height:7px;border-radius:4px;background:rgba(0,0,0,.1);overflow:hidden;margin:5px 0 3px'><div style='height:100%;width:"+pc+"%;background:linear-gradient(90deg,#43a047,#e0a100)'></div></div><small>"+pr+" · "+y7("rw")+mf(qRew())+"</small></div>"+(x.c?"<span style='font-size:18px;min-width:56px;text-align:center'>✔</span>":"<button class='b g' data-a='dq"+i+"' "+(ready?"":"disabled")+">"+y7("clm")+"</button>")+"</div>"});
- h+="<div class='row' style='padding:8px 12px'><small style='color:var(--mut)'>🎉 "+y7("dqB")+mf(Math.max(5000,Math.round(cap()*.03)))+(q.q.every(function(x){return x.c})?" ✔":"")+"</small></div>";put("dqL",h)}
+  h+="<div class='row bar' style='margin-bottom:6px"+(ready?";outline:2px solid #e0a100":"")+"'><span class='em'>"+x.e+"</span><div class='inf'><b style='font-size:14px'><span style='color:#e0a100'>"+"★".repeat(x.t||1)+"</span> "+esc(txt)+"</b><div style='height:7px;border-radius:4px;background:rgba(0,0,0,.1);overflow:hidden;margin:5px 0 3px'><div style='height:100%;width:"+pc+"%;background:linear-gradient(90deg,#43a047,#e0a100)'></div></div><small>"+pr+" · "+y7("rw")+mf(qRew(x.t))+"</small></div>"+(x.c?"<span style='font-size:18px;min-width:56px;text-align:center'>✔</span>":"<button class='b g' data-a='dq"+i+"' "+(ready?"":"disabled")+">"+y7("clm")+"</button>")+"</div>"});
+ h+="<div class='row' style='padding:8px 12px'><small style='color:var(--mut)'>🎉 "+y7("dqB")+mf(qBon())+(q.q.every(function(x){return x.c})?" ✔":"")+"</small></div>";put("dqL",h)}
 dayCheck();
 
 /* отрисовка */
@@ -1134,10 +1165,10 @@ function act(e){var b=e.target.closest&&e.target.closest("button[data-a]");if(!b
  cache={};render()}
 $("t6").addEventListener("click",act);
 /* опыт пропуска: время игры + заработок */
-setInterval(function(){if(document.hidden)return;spInit();dayCheck();var dE=Math.max(0,S.earn-spE),dT=Math.max(0,S.pt-spT);spE=S.earn;spT=S.pt;if(dE>0)window.__qa("earn",dE);
+setInterval(function(){if(document.hidden)return;spInit();dayCheck();var dE=Math.max(0,S.earn-spE),dT=Math.max(0,S.pt-spT);spE=S.earn;spT=S.pt;if(dE>0)window.__qa("earn",dE);if(S.dq){S.dq.ts=(S.dq.ts||0)+1;if(S.dq.ts>=60){S.dq.ts=0;window.__qa("time",1)}}
  var add=dE/Math.max(500,cap()*.01)+dT/30000;S.sp.xp=Math.min(MAXL*XPL,S.sp.xp+add);
- $("wkC").style.display=S.ct?"":"none";$("mo").classList.toggle("dot",spPend()>0||stPend()||dqPend());render()},1000);
-$("wkC").style.display=S.ct?"":"none";
+ $("wkC").style.display=S.ct?"":"none";$("wkD").style.display=S.dgo?"":"none";$("mo").classList.toggle("dot",spPend()>0||stPend()||dqPend());render()},1000);
+$("wkC").style.display=S.ct?"":"none";$("wkD").style.display=S.dgo?"":"none";
 })();
 
 /* 🚪 Выход из игры: подтверждение и место под рекламу (реклама подключается позже через window.FARM_AD.exitSlot(элемент)) */
@@ -1169,6 +1200,245 @@ lab.textContent=T("Реклама","Ad","广告");
 try{if(window.FARM_AD&&typeof FARM_AD.banner==="function")FARM_AD.banner(slot);else if(BANNER_PLACEHOLDER)slot.textContent=T("Здесь будет реклама","Ad will be shown here","此处将显示广告");else box.style.display="none"}catch(e){}
 })();
 
+/* ===== Сообщество: друзья, кланы, соревнования + питомцы в магазине (1.1.0) ===== */
+(function(){
+var E=function(x){return String(x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")};
+function Q(r,e,z){return LANG==="ru"?r:LANG==="zh"?(z||e):e}
+function C(){var c=S.com;if(!c||typeof c!=="object")c=S.com={};
+if(!c.id)c.id="RF-9"+String(Math.floor(Math.random()*1e5)).padStart(5,"0");
+if(!c.fr)c.fr=[];if(!c.rq)c.rq=[];if(!c.ou)c.ou={};if(c.tab===undefined)c.tab=0;
+if(!c.cs)c.cs={p:0,t:0};if(!c.pr)c.pr=[];if(!c.st)c.st={bd:0,w:0,pz:0};
+if(c.dy===undefined){c.dy=0;c.wy=0;c.did=-1;c.wid=-1;c.lw=S.wk||0}
+if(c.cl===undefined)c.cl=null;
+return c}
+function mycap(){return cap()*(1+.1*S.st)}
+function bid(k){return "RF-"+(100000+k)}
+function plv(c){return Math.min(99,1+Math.floor(Math.log10(c/10+1)*11))}
+function bach(c){return Math.min(AC.length,Math.floor(Math.log10(c+1)*AC.length/11))}
+function bfarm(k){var rem=botCap(k)*.6,o=[];for(var i=N-1;i>=0&&o.length<8;i--){if(rem>=A[i].b){var n=Math.min(30,Math.floor(rem/A[i].b));rem-=n*A[i].b;o.push([i,n])}}if(!o.length)o.push([0,Math.max(1,Math.min(30,Math.floor(botCap(k)/10)))]);return o}
+function av(k){return A[bfarm(k)[0][0]].e}
+function onl(k){return (k*7+Math.floor(Date.now()/6e5))%5<2}
+function myAv(){for(var i=N-1;i>=0;i--)if(S.l[i]>0)return A[i].e;return "🧑‍🌾"}
+function hm(ms){var h=Math.floor(ms/36e5),d=Math.floor(h/24);return d>0?d+Q(" д ", "d ","天")+(h%24)+Q(" ч"," h","小时"):h+Q(" ч "," h ","小时")+Math.floor(ms%36e5/6e4)+Q(" мин"," min","分钟")}
+function bar(p){return "<i class='cmb'><u style='width:"+Math.max(0,Math.min(100,p))+"%'></u></i>"}
+function pickNear(n,seed){var rg2=mb(seed),out=[],t=0,m=Math.max(30,cap()),lo=m/6,hi=m*6;
+while(out.length<n&&t<8000){var k=Math.floor(rg2()*NBOT);t++;var v=BC[k];if(v>=lo&&v<=hi&&out.indexOf(k)<0)out.push(k)}
+while(out.length<n){var k2=Math.floor(rg2()*NBOT);if(out.indexOf(k2)<0)out.push(k2)}return out}
+function near1(){var c=C();for(var t=0;t<20;t++){var k=pickNear(1,Math.floor(Math.random()*1e9))[0];if(c.fr.indexOf(k)<0&&c.rq.indexOf(k)<0&&!c.ou[k])return k}return -1}
+
+/* ---------- друзья ---------- */
+function isFr(k){return C().fr.indexOf(k)>=0}
+function addReq(k){var c=C();if(isFr(k)||c.ou[k])return;
+if(c.rq.indexOf(k)>=0){acc(k);return}
+if(c.fr.length>=50){toast(Q("Список друзей полон (50)","Friend list is full (50)","好友列表已满(50)"));return}
+c.ou[k]=Date.now()+8000+Math.random()*30000;toast("📨 "+Q("Заявка отправлена","Request sent","申请已发送"));save();rall()}
+function acc(k){var c=C(),i=c.rq.indexOf(k);if(i>=0)c.rq.splice(i,1);
+if(c.fr.length>=50){toast(Q("Список друзей полон (50)","Friend list is full (50)","好友列表已满(50)"));return}
+if(c.fr.indexOf(k)<0)c.fr.push(k);toast("🤝 "+Q("Теперь вы друзья","You are friends now","你们已成为好友"));save();rall()}
+function dec(k){var c=C(),i=c.rq.indexOf(k);if(i>=0)c.rq.splice(i,1);save();rall()}
+function rmf(k){var c=C();c.fr=c.fr.filter(function(x){return x!==k});save();rall()}
+function srch(q){q=q.trim().toLowerCase();var out=[];if(q.length<2)return out;
+var m=q.match(/^(?:rf-?)?(\d{6})$/);if(m){var k=+m[1]-100000;if(k>=0&&k<NBOT)out.push(k);return out}
+for(var k2=0;k2<NBOT&&out.length<8;k2++){if(botName(k2).toLowerCase().indexOf(q)>=0)out.push(k2)}return out}
+var SR=null;
+function plRow(k,acts){var c=botCap(k);return "<div class='row bar cmr' data-c='pf' data-k='"+k+"'><span class='em'>"+av(k)+"</span><div class='inf'><b>"+E(botName(k))+" <span class='od"+(onl(k)?" on":"")+"'></span></b><small>"+Q("Ур. ","Lv. ","等级 ")+plv(c)+" · "+title(c)+" · "+mf(c)+" · "+bid(k)+"</small></div>"+(acts||"")+"</div>"}
+function frBtn(k){var c=C();return isFr(k)?"<span class='em' style='font-size:20px'>✔</span>":c.ou[k]?"<span class='em' style='font-size:18px'>⏳</span>":c.rq.indexOf(k)>=0?"<button class='b g s' data-c='ac' data-k='"+k+"'>"+Q("Принять","Accept","接受")+"</button>":"<button class='b s' data-c='ad' data-k='"+k+"'>➕</button>"}
+function rSR(){var h="";if(SR===null)h="";else if(!SR.length)h="<div class='ft'>"+Q("Никого не найдено. Введите имя (от 2 букв) или ID вида RF-123456","Nobody found. Enter a name (2+ letters) or an ID like RF-123456","没有找到。请输入名字(至少2个字符)或形如 RF-123456 的ID")+"</div>";
+else SR.forEach(function(k){h+=plRow(k,frBtn(k))});$("fSr").innerHTML=h}
+function rFr(){var c=C(),mc=mycap(),h="";
+$("fMe").innerHTML="<span class='em'>"+myAv()+"</span><div class='inf'><b>"+E(S.nm||"Моя ферма")+"</b><small>"+Q("Ур. ","Lv. ","等级 ")+plv(mc)+" · "+title(mc)+" · "+Q("ID: ","ID: ","ID:")+c.id+"</small></div><button class='b s' data-c='cp'>📋 ID</button>";
+var rq="";c.rq.forEach(function(k){rq+=plRow(k,"<button class='b g s' data-c='ac' data-k='"+k+"'>✔</button><button class='b s r' data-c='dc' data-k='"+k+"'>✖</button>")});
+$("fRqH").hidden=$("fRq").hidden=!c.rq.length;$("fRq").innerHTML=rq;
+var items=c.fr.map(function(k){return{k:k,v:botCap(k)}});items.sort(function(a,b){return b.v-a.v});
+var pos=1;items.forEach(function(x){if(x.v>mc)pos++});
+$("fLsH").textContent=Q("👥 Друзья","👥 Friends","👥 好友")+" · "+c.fr.length+"/50"+(c.fr.length?" · "+Q("вы #","you #","你第")+pos+Q(" из "," of ","/")+(c.fr.length+1):"");
+items.forEach(function(x,i){h+=plRow(x.k,"<span class='em' style='font-size:14px;color:var(--mut);min-width:28px;text-align:right'>#"+(i+(x.v>mc?1:2))+"</span>")});
+if(!c.fr.length)h="<div class='ft'>"+Q("Пока нет друзей. Найдите игроков по имени или ID.","No friends yet. Find players by name or ID.","还没有好友。通过名字或ID查找玩家。")+"</div>";
+$("fLs").innerHTML=h;rSR()}
+function prof(k){var c=botCap(k),f=bfarm(k),ac=bach(c),r=1,fq=(Date.now()-EP)/864e5;
+for(var i=0;i<NBOT;i++){if(BC[i]*(1+BG[i]*fq)>c)r++}
+var o=document.createElement("div");o.className="cmo";
+var fm="";f.forEach(function(x){fm+="<span>"+A[x[0]].e+"<sup>×"+x[1]+"</sup></span>"});
+o.innerHTML="<div class='cms'><div class='bar' style='padding:0 0 8px'><span class='em' style='font-size:44px'>"+av(k)+"</span><div class='inf'><b style='font-size:17px'>"+E(botName(k))+"</b><small>"+bid(k)+" · "+(onl(k)?"🟢 "+Q("в сети","online","在线"):"⚪ "+Q("не в сети","offline","离线"))+"</small></div><button class='b s' data-x='1'>✕</button></div>"+
+"<div class='cmch'><span>⭐ "+Q("Ур. ","Lv. ","等级 ")+plv(c)+"</span><span>🎖 "+title(c)+"</span><span>💰 "+mf(c)+"</span><span>🌍 #"+nfmt(r)+"</span></div>"+
+"<h3 style='margin:12px 2px 6px'>🌾 "+Q("Ферма","Farm","农场")+"</h3><div class='cmfm'>"+fm+"</div>"+
+"<h3 style='margin:12px 2px 6px'>🏅 "+Q("Достижения: ","Achievements: ","成就:")+ac+"/"+AC.length+"</h3>"+bar(ac/AC.length*100)+
+"<div style='display:flex;gap:8px;margin-top:14px'>"+(isFr(k)?"<button class='b r' style='flex:1' data-f='rm'>"+Q("Удалить из друзей","Remove friend","删除好友")+"</button>":"<button class='b g' style='flex:1' data-f='ad'>➕ "+Q("В друзья","Add friend","加好友")+"</button>")+"</div></div>";
+o.onclick=function(e){var t=e.target;if(t===o||t.closest("[data-x]")){o.remove();return}var b=t.closest("[data-f]");if(b){if(b.dataset.f==="rm")rmf(k);else addReq(k);o.remove()}};
+document.body.appendChild(o)}
+
+/* ---------- кланы ---------- */
+var NCL=600,CCOST=1000,CLR=[],BADGES=["🛡️","🐺","🦉","🐝","🌾","🦄","🔥","⭐"];
+var ADJ=LANG==="ru"?["Золотые","Дружные","Весёлые","Быстрые","Мудрые","Лесные","Северные","Звёздные","Храбрые","Сытые","Солнечные","Дикие"]:["Golden","Friendly","Merry","Swift","Wise","Forest","Northern","Starry","Brave","Plump","Sunny","Wild"];
+var NOUN=LANG==="ru"?["Фермеры","Коровы","Лисы","Совы","Пчёлы","Жнецы","Бараны","Единороги","Волки","Курицы"]:["Farmers","Cows","Foxes","Owls","Bees","Reapers","Rams","Unicorns","Wolves","Hens"];
+function clan(j){if(CLR[j])return CLR[j];var r=mb(j*977+13),a=ADJ[Math.floor(r()*ADJ.length)],n=NOUN[Math.floor(r()*NOUN.length)];
+var o={j:j,id:"CL-"+(1000+j),nm:a+" "+n,bd:BADGES[Math.floor(r()*BADGES.length)],n:4+Math.floor(r()*27),op:r()<.6,mc:r()<.4?0:Math.round(Math.pow(10,2+r()*4)),u:Math.max(.002,r())};
+o.base=2000*o.n*Math.pow(1/o.u,1.25);return CLR[j]=o}
+function cCap(o){return o.base*(1+.06*(Date.now()-EP)/864e5)}
+function hh(j,w){var h=Math.sin((j+1)*7.31+w*51.7)*43758.5453;return h-Math.floor(h)}
+function cWk(o,w,f){return cCap(o)*.25*(.5+hh(o.j,w))*f}
+function vis(cl){return cl.ct?Math.min(cl.m.length,Math.floor((Date.now()-cl.ct)/12e4)):cl.m.length}
+function wf(){return ((Date.now()-EP)%WK)/WK}
+function clCap(cl){var s=mycap(),n=vis(cl);for(var i=0;i<n;i++)s+=botCap(cl.m[i]);return s}
+function teamW(cl,w,f,mine){var s=mine,n=vis(cl);for(var i=0;i<n;i++)s+=bw(cl.m[i],w,f);return s}
+function joinClan(o){var c=C();c.cl={j:o.j,id:o.id,nm:o.nm,bd:o.bd,role:"mem",m:pickNear(o.n-1,o.j*31+7),ct:0,pts:0,tk:null,wy0:0};c.cj=null;save();toast("🛡️ "+Q("Вы вступили в клан ","You joined clan ","你加入了战队 ")+o.nm);rall()}
+function mkClan(nm,bd){var c=C();if(c.cl)return;nm=nm.trim().slice(0,16);
+if(nm.length<3){toast(Q("Название: от 3 символов","Name: at least 3 characters","名称至少3个字符"));return}
+if(S.c<CCOST){toast(Q("Не хватает денег","Not enough money","金钱不足"));return}
+S.c-=CCOST;c.cl={j:-1,id:"CL-"+(9000+Math.floor(Math.random()*900)),nm:nm,bd:bd,role:"lead",m:pickNear(29,Math.floor(Math.random()*1e9)),ct:Date.now(),pts:0,tk:null,wy0:0};save();toast("🛡️ "+Q("Клан создан: ","Clan created: ","战队已创建:")+nm);rall()}
+function leave(){var c=C();if(!c.cl)return;if(!confirm(Q("Покинуть клан?","Leave the clan?","退出战队?")))return;c.cl=null;c.cj=null;save();rall()}
+function tks(){var c=C(),cl=c.cl;if(!cl)return null;var w=wid();
+if(!cl.tk||cl.tk.w!==w){var v=vis(cl),bs=0;for(var i=0;i<v;i++)bs+=bw(cl.m[i],w,1)*.3;var nd=Math.max(100,Math.round(cap()*.03));
+cl.tk={w:w,n:v,y0:c.wy,b0:{od:S.od||0,gs:S.gs||0},t:[bs+nd,Math.round(v*.8)+3,Math.round(v*.4)+2],bm:[bs,Math.round(v*.8),Math.round(v*.4)],cl:[0,0,0],ch:0}}
+return cl.tk}
+function tprog(tk){var c=C(),f=wf();return[c.wy-tk.y0+tk.bm[0]*f,(S.od-tk.b0.od)+Math.floor(tk.bm[1]*f),(S.gs-tk.b0.gs)+Math.floor(tk.bm[2]*f)]}
+function tclaim(t){var c=C(),cl=c.cl;if(!cl)return;var tk=tks(),p=tprog(tk);if(tk.cl[t]||p[t]<tk.t[t])return;
+var g=Math.max(200,Math.round(cap()*.01));S.c+=g;tk.cl[t]=1;cl.pts+=10;toast("🎁 "+Q("Награда клана: +","Clan reward: +","战队奖励:+")+mf(g));save();rall()}
+function chest(){var c=C(),cl=c.cl;if(!cl)return;var tk=tks();if(tk.ch||!tk.cl[0]||!tk.cl[1]||!tk.cl[2])return;
+var g=Math.max(500,Math.round(cap()*.03));S.c+=g;tk.ch=1;cl.pts+=25;toast("🎁 "+Q("Сундук клана: +","Clan chest: +","战队宝箱:+")+mf(g));save();rall()}
+function clanList(q){q=q.trim().toLowerCase();var a=[];for(var j=0;j<NCL;j++){var o=clan(j);if(!q||o.nm.toLowerCase().indexOf(q)>=0||o.id.toLowerCase()===q)a.push(o)}
+var m=cap();a.sort(function(x,y){var ax=m>=x.mc?0:1,ay=m>=y.mc?0:1;return ax-ay||cCap(y)-cCap(x)});return a.slice(0,10)}
+var CQ=null;
+function clBtn(o){var c=C();if(c.cj&&c.cj.j===o.j)return "<span class='em' style='font-size:18px'>⏳</span>";var ok=cap()>=o.mc;
+return "<button class='b "+(ok?"g ":"")+"s' data-c='jn' data-k='"+o.j+"' "+(ok||0?"":"disabled")+">"+(o.op?Q("Вступить","Join","加入"):Q("Заявка","Apply","申请"))+"</button>"}
+function clRow(o){return "<div class='row bar'><span class='em'>"+o.bd+"</span><div class='inf'><b>"+E(o.nm)+"</b><small>"+o.id+" · 👥 "+o.n+"/30 · 💰 "+mf(cCap(o))+(o.mc?" · "+Q("от ","min ","起 ")+mf(o.mc):"")+(o.op?"":" · 🔒")+"</small></div>"+clBtn(o)+"</div>"}
+function rCS(){if(CQ===null)CQ="";var l=clanList(CQ),h="";l.forEach(function(o){h+=clRow(o)});if(!l.length)h="<div class='ft'>"+Q("Кланы не найдены","No clans found","没有找到战队")+"</div>";$("clSr").innerHTML=h}
+function lbH(items){items.sort(function(a,b){return a.rk-b.rk});var h="",pv=-1;items.forEach(function(x){if(pv>=0&&x.rk-pv>1)h+="<div class='gap'>···</div>";pv=x.rk;h+="<div class='lb"+(x.me?" me":"")+"'><b>#"+nfmt(x.rk)+"</b><span>"+(x.me?"👤 ":"")+E(x.n)+"</span>"+x.v+"</div>"});return h}
+var CB={t:0,c:null};
+function clanBoard(){var c=C(),cl=c.cl,w=wid(),f=wf(),mine=teamW(cl,w,f,c.wy),all=[];
+for(var j=0;j<NCL;j++){if(cl.j===j)continue;var o=clan(j);all.push({n:o.bd+" "+o.nm,v:cWk(o,w,f)})}
+all.sort(function(a,b){return b.v-a.v});var r=1;all.forEach(function(x){if(x.v>mine)r++});
+var it=[];for(var i=0;i<5;i++)it.push({rk:i+1>=r?i+2:i+1,n:all[i].n,v:mf(all[i].v)});it=it.filter(function(x){return x.rk<=5||false});
+it.push({rk:r,n:cl.bd+" "+cl.nm,v:mf(mine),me:1});return{r:r,h:lbH(it),mine:mine}}
+function rClY(){var c=C(),cl=c.cl,h="";
+if(!cl){$("clN").hidden=false;$("clY").hidden=true;rCS();return}
+$("clN").hidden=true;$("clY").hidden=false;
+var tk=tks(),p=tprog(tk),cp=clCap(cl),n=vis(cl)+1,cb=clanBoard(),r=1;
+for(var j=0;j<NCL;j++){if(j!==cl.j&&cCap(clan(j))>cp)r++}
+h+="<div class='row cmc'><div class='bar' style='padding:0'><span class='em' style='font-size:40px'>"+cl.bd+"</span><div class='inf'><b style='font-size:17px'>"+E(cl.nm)+"</b><small>"+cl.id+" · "+(cl.role==="lead"?"👑 "+Q("Лидер","Leader","队长"):Q("Участник","Member","成员"))+"</small></div></div>"+
+"<div class='cmch'><span>👥 "+n+"/30</span><span>💰 "+mf(cp)+"</span><span>🏅 "+Q("Клан #","Clan #","战队第")+r+"</span><span>⭐ "+cl.pts+"</span></div></div>";
+h+="<h3>🎯 "+Q("Совместные задания недели","Weekly clan tasks","本周战队任务")+" · "+hm(WK-(Date.now()-EP)%WK)+"</h3>";
+var nm=[Q("💰 Продажи клана","💰 Clan sales","💰 战队销售额"),Q("📦 Заказы покупателей","📦 Customer orders","📦 顾客订单"),Q("🌟 Золотые звёзды","🌟 Golden stars","🌟 金星")],gr=Math.max(200,Math.round(cap()*.01)),all3=1;
+for(var t=0;t<3;t++){var pr=Math.min(p[t],tk.t[t]),ok=p[t]>=tk.t[t],cld=tk.cl[t];if(!cld)all3=0;
+h+="<div class='row cmc' style='margin-bottom:8px'><div style='display:flex;justify-content:space-between;gap:8px;align-items:center'><b style='font-size:14px'>"+nm[t]+"</b>"+(cld?"<span class='em' style='font-size:18px'>✔</span>":"<button class='b g s' data-c='tc' data-k='"+t+"' "+(ok?"":"disabled")+">🎁 "+mf(gr)+"</button>")+"</div><small style='color:var(--mut);display:block;margin:3px 0 6px'>"+(t===0?mf(pr)+" / "+mf(tk.t[0]):Math.floor(pr)+" / "+tk.t[t])+"</small>"+bar(pr/tk.t[t]*100)+"</div>"}
+h+="<button class='b g' style='width:100%;padding:11px;margin-bottom:6px' data-c='ch' "+(all3&&!tk.ch?"":"disabled")+">🎁 "+Q("Сундук клана (все задания)","Clan chest (all tasks)","战队宝箱(完成全部任务)")+" · "+mf(Math.max(500,Math.round(cap()*.03)))+"</button>";
+h+="<h3>🏆 "+Q("Рейтинг кланов · продажи за неделю","Clan ranking · weekly sales","战队排行 · 本周销售")+"</h3><div class='row'>"+cb.h+"</div>";
+h+="<h3>👥 "+Q("Участники","Members","成员")+" · "+n+"</h3><div class='row bar' style='margin-bottom:6px'><span class='em'>"+myAv()+"</span><div class='inf'><b>"+E(S.nm||"Моя ферма")+" · "+Q("вы","you","你")+"</b><small>"+(cl.role==="lead"?"👑 ":"")+Q("Ур. ","Lv. ","等级 ")+plv(mycap())+" · "+Q("вклад ","share ","贡献 ")+mf(c.wy-tk.y0)+"</small></div></div>";
+var f=wf(),ms=[];for(var i=0;i<vis(cl);i++)ms.push(cl.m[i]);
+ms.forEach(function(k,i){h+=plRow(k,"<span class='em' style='font-size:12px;color:var(--mut);text-align:right;min-width:62px'>"+(i===0?(cl.role==="lead"?"⭐ "+Q("Зам.","Deputy","副队"):"👑 "+Q("Лидер","Leader","队长")):"")+"<br>"+mf(bw(k,wid(),f)*.3)+"</span>")});
+if(vis(cl)<cl.m.length)h+="<div class='ft'>"+Q("В клан постепенно вступают новые игроки…","New players are joining the clan…","新玩家正在陆续加入战队…")+"</div>";
+h+="<button class='b r' style='width:100%;margin-top:14px;padding:11px' data-c='lv'>"+Q("Покинуть клан","Leave clan","退出战队")+"</button>";
+$("clY").innerHTML=h}
+
+/* ---------- соревнования ---------- */
+function dayId(){return Math.floor((Date.now()-EP)/864e5)}
+function dFr(){return ((Date.now()-EP)%864e5)/864e5}
+function dvv(k,d,f){var h=Math.sin((k+1)*12.9898+d*78.233+3.7)*43758.5453;h-=Math.floor(h);return botCap(k)*.25/7*(.5+h)*f}
+function topP(fn,mine){var t=[],r=1;for(var k=0;k<NBOT;k++){var v=fn(k);if(v>mine)r++;if(t.length<5||v>t[t.length-1].v){var p=t.length;while(p>0&&t[p-1].v<v)p--;t.splice(p,0,{k:k,v:v});if(t.length>5)t.pop()}}return{r:r,t:t}}
+var PC={};
+function cached(key,fn){var n=Date.now(),x=PC[key];if(x&&n-x.at<4000)return x.v;var v=fn();PC[key]={at:n,v:v};return v}
+function pBoard(res,mine){var it=[];res.t.forEach(function(x,i){it.push({rk:i+1>=res.r?i+2:i+1,n:botName(x.k),v:mf(x.v)})});it=it.filter(function(x){return x.rk<=6});it.push({rk:res.r,n:S.nm||"Моя ферма",v:mf(mine),me:1});return lbH(it)}
+function rCt(){var c=C(),cs=c.cs,h="",d=dayId(),df=dFr(),w=wid(),wfr=wf();
+var dres=cached("d",function(){return topP(function(k){return dvv(k,d,df)},c.dy)}),wres=cached("w",function(){return topP(function(k){return bw(k,w,wfr)},S.wk)});
+h+="<div class='row cmc' style='margin-bottom:8px'><b>☀️ "+Q("Ежедневное соревнование","Daily contest","每日竞赛")+"</b><small style='display:block;color:var(--mut);margin:3px 0 6px'>"+Q("Продажи за день: ","Today's sales: ","今日销售:")+mf(c.dy)+" · "+Q("место #","place #","名次 #")+nfmt(dres.r)+" · "+hm(864e5-(Date.now()-EP)%864e5)+"</small>"+bar(dres.r<=1000?100-dres.r/10:5)+"<small style='display:block;color:var(--mut);margin-top:5px'>"+Q("Приз: 1 место 2% капитала, топ-10 0,8%, топ-100 0,4%, топ-1000 0,15%","Prize: 1st 2% of capital, top-10 0.8%, top-100 0.4%, top-1000 0.15%","奖励:第1名资产的2%,前10名0.8%,前100名0.4%,前1000名0.15%")+"</small></div>";
+h+="<div class='row cmc' style='margin-bottom:8px'><b>📅 "+Q("Недельное соревнование","Weekly contest","每周竞赛")+"</b><small style='display:block;color:var(--mut);margin:3px 0 6px'>"+Q("Продажи за неделю: ","Weekly sales: ","本周销售:")+mf(S.wk)+" · "+Q("место #","place #","名次 #")+nfmt(wres.r)+" · "+hm(WK-(Date.now()-EP)%WK)+"</small>"+bar(wres.r<=1000?100-wres.r/10:5)+"<small style='display:block;color:var(--mut);margin-top:5px'>"+Q("Приз: 1 место 6% капитала, топ-10 2,5%, топ-100 1,2%, топ-1000 0,5% (выплата в конце недели)","Prize: 1st 6% of capital, top-10 2.5%, top-100 1.2%, top-1000 0.5% (paid at week end)","奖励:第1名资产的6%,前10名2.5%,前100名1.2%,前1000名0.5%(周末发放)")+"</small></div>";
+var tm;if(c.cl){var cb=cached("cb",function(){return clanBoard()});tm="<div class='row cmc' style='margin-bottom:8px'><b>🛡️ "+Q("Командный зачёт","Team contest","团队赛")+" · "+E(c.cl.nm)+"</b><small style='display:block;color:var(--mut);margin:3px 0 6px'>"+Q("Продажи клана: ","Clan sales: ","战队销售:")+mf(cb.mine)+" · "+Q("клан #","clan #","战队第")+cb.r+"</small>"+bar(cb.r<=50?100-cb.r*2:5)+"<small style='display:block;color:var(--mut);margin-top:5px'>"+Q("Приз каждому участнику: 1 место 5% капитала, топ-10 2%, топ-50 1%","Prize for each member: 1st 5% of capital, top-10 2%, top-50 1%","每位成员奖励:第1名资产的5%,前10名2%,前50名1%")+"</small></div>"}
+else tm="<div class='row bar'><span class='em'>🛡️</span><div class='inf'><b>"+Q("Командный зачёт","Team contest","团队赛")+"</b><small>"+Q("Вступите в клан, чтобы участвовать в командных соревнованиях","Join a clan to enter team contests","加入战队即可参加团队赛")+"</small></div><button class='b g s' data-c='gc'>"+Q("Кланы","Clans","战队")+"</button></div>";
+h+=tm;
+if(c.pr.length){h+="<h3>🎁 "+Q("Награды","Rewards","奖励")+"</h3>";c.pr.forEach(function(x,i){h+="<div class='row bar'><span class='em'>"+(x.t==="d"?"☀️":"🛡️")+"</span><div class='inf'><b>"+(x.t==="d"?Q("Ежедневное","Daily","每日"):Q("Командное","Team","团队"))+" · "+Q("место #","place #","名次 #")+nfmt(x.p)+"</b><small>"+Q("Приз: ","Prize: ","奖励:")+mf(x.g)+"</small></div><button class='b g' data-c='pz' data-k='"+i+"'>"+Q("Забрать","Claim","领取")+"</button></div>"})}
+h+="<h3>📊 "+Q("Таблица лидеров","Leaderboard","排行榜")+"</h3><div class='cmg'><button data-c='ct' data-k='0' class='"+(cs.t===0?"on":"")+"'>👤 "+Q("Игроки","Players","玩家")+"</button><button data-c='ct' data-k='1' class='"+(cs.t===1?"on":"")+"'>🛡️ "+Q("Кланы","Clans","战队")+"</button></div>";
+if(cs.t===0){h+="<div class='cmg'><button data-c='cq' data-k='0' class='"+(cs.p===0?"on":"")+"'>"+Q("День","Day","日")+"</button><button data-c='cq' data-k='1' class='"+(cs.p===1?"on":"")+"'>"+Q("Неделя","Week","周")+"</button></div>";
+h+="<div class='row'>"+(cs.p===0?pBoard(dres,c.dy):pBoard(wres,S.wk))+"</div>"}
+else if(c.cl)h+="<div class='row'>"+cached("cb",function(){return clanBoard()}).h+"</div>";
+else{var all=[];for(var j=0;j<NCL;j++){var o=clan(j);all.push({n:o.bd+" "+o.nm,v:cWk(o,w,wfr)})}all.sort(function(a,b){return b.v-a.v});var it=[];for(var i=0;i<5;i++)it.push({rk:i+1,n:all[i].n,v:mf(all[i].v)});h+="<div class='row'>"+lbH(it)+"</div>"}
+h+="<h3>📈 "+Q("Ваши результаты","Your results","你的成绩")+"</h3><div class='row cmc'><div class='cmch' style='margin:0'><span>🏆 "+Q("Лучший день: ","Best day: ","最佳日:")+mf(c.st.bd)+"</span><span>🥇 "+Q("Соревнований: ","Contests: ","参赛次数:")+c.st.w+"</span><span>💰 "+Q("Призов: ","Prizes: ","奖金:")+mf(c.st.pz)+"</span></div></div>";
+$("cp2").innerHTML=h}
+
+/* ---------- каркас вкладки ---------- */
+var TB=[["🏆",Q("Рейтинг","Ranking","排名")],["👥",Q("Друзья","Friends","好友")],["🛡️",Q("Кланы","Clans","战队")],["🏁",Q("Соревнования","Contests","竞赛")]];
+function rTabs(){var c=C(),bd=[0,c.rq.length,0,c.pr.length],h="";TB.forEach(function(t,i){h+="<button data-c='tb' data-k='"+i+"' class='"+(c.tab===i?"on":"")+"'><i>"+t[0]+"</i><span>"+t[1]+"</span>"+(bd[i]?"<u>"+bd[i]+"</u>":"")+"</button>"});if(PC.tabs!==h){PC.tabs=h;$("cmT").innerHTML=h}}
+function show(){var c=C();$("rtM").hidden=c.tab!==0;$("cmP").hidden=c.tab===0;for(var i=1;i<4;i++)$("cp"+(i-1)).hidden=c.tab!==i;rTabs();rall()}
+function rall(){if($("t3").hidden)return;var c=C();rTabs();if(c.tab===1)rFr();else if(c.tab===2)rClY();else if(c.tab===3)rCt()}
+function build(){
+$("cp0").innerHTML="<div class='row bar me' id='fMe' style='cursor:default'></div><div class='row cmc'><div style='display:flex;gap:8px'><input class='nm' id='fSq' maxlength='24' placeholder='"+E(Q("Имя или ID (RF-123456)","Name or ID (RF-123456)","名字或ID(RF-123456)"))+"'><button class='b' id='fSb' data-c='sr'>🔍</button></div></div><div id='fSr'></div><h3 id='fRqH'>📨 "+Q("Заявки в друзья","Friend requests","好友申请")+"</h3><div id='fRq'></div><h3 id='fLsH'></h3><div id='fLs'></div>";
+var bh="";BADGES.forEach(function(b,i){bh+="<button data-c='bg' data-k='"+i+"' class='"+(i===0?"on":"")+"'>"+b+"</button>"});
+$("cp1").innerHTML="<div id='clN'><h3>➕ "+Q("Создать клан","Create a clan","创建战队")+" · "+mf(CCOST)+"</h3><div class='row cmc'><div style='display:flex;gap:8px'><input class='nm' id='clNm' maxlength='16' placeholder='"+E(Q("Название клана","Clan name","战队名称"))+"'><button class='b g' data-c='cc'>"+Q("Создать","Create","创建")+"</button></div><div class='cmg' id='clBg' style='margin-top:8px'>"+bh+"</div></div><h3>🔍 "+Q("Поиск кланов","Find clans","查找战队")+"</h3><div class='row cmc'><div style='display:flex;gap:8px'><input class='nm' id='clQ' maxlength='24' placeholder='"+E(Q("Название или ID (CL-1001)","Name or ID (CL-1001)","名称或ID(CL-1001)"))+"'><button class='b' data-c='cs'>🔍</button></div></div><div id='clSr'></div></div><div id='clY' hidden></div>";
+$("cp2").innerHTML="";
+}
+var BSEL=0;
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#cmP [data-c],#cmT [data-c]");if(!b||b.disabled)return;var a=b.dataset.c,k=+b.dataset.k,c=C();
+if(a==="tb"){c.tab=k;show();save();return}
+if(a==="pf"){prof(k);return}
+if(a==="ad"){addReq(k);return}if(a==="ac"){acc(k);return}if(a==="dc"){dec(k);return}
+if(a==="cp"){var t=c.id;try{navigator.clipboard.writeText(t).then(function(){toast(Q("ID скопирован: ","ID copied: ","ID已复制:")+t)},function(){toast("ID: "+t)})}catch(x){toast("ID: "+t)}return}
+if(a==="sr"){SR=srch($("fSq").value);rSR();return}
+if(a==="bg"){BSEL=k;document.querySelectorAll("#clBg button").forEach(function(x,i){x.classList.toggle("on",i===k)});return}
+if(a==="cc"){mkClan($("clNm").value,BADGES[BSEL]);return}
+if(a==="cs"){CQ=$("clQ").value;rCS();return}
+if(a==="jn"){var o=clan(k);if(c.cl)return;if(cap()<o.mc){toast(Q("Нужен капитал от ","Need capital of at least ","需要资产至少")+mf(o.mc));return}
+if(o.op)joinClan(o);else{c.cj={j:k,at:Date.now()+12000+Math.random()*20000};toast("📨 "+Q("Заявка в клан отправлена","Clan request sent","入队申请已发送"));save();rall()}return}
+if(a==="tc"){tclaim(k);return}if(a==="ch"){chest();return}if(a==="lv"){leave();return}
+if(a==="ct"){c.cs.t=k;rall();return}if(a==="cq"){c.cs.p=k;rall();return}
+if(a==="pz"){var x=c.pr[k];if(x){S.c+=x.g;c.st.pz+=x.g;c.pr.splice(k,1);toast("🏆 +"+mf(x.g));save();rall()}return}
+if(a==="gc"){c.tab=2;show()}
+});
+document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target&&e.target.id==="fSq"){SR=srch(e.target.value);rSR()}else if(e.key==="Enter"&&e.target&&e.target.id==="clQ"){CQ=e.target.value;rCS()}});
+
+/* ---------- фоновый тик ---------- */
+function tick(){if(document.hidden)return;var c=C(),n=Date.now(),ch=false;
+var d=S.wk-c.lw;if(d>0){c.dy+=d;c.wy+=d}c.lw=S.wk;
+for(var k in c.ou){if(c.ou[k]<=n){delete c.ou[k];var kk=+k;if(c.fr.length<50&&c.fr.indexOf(kk)<0){c.fr.push(kk);toast("🤝 "+botName(kk)+" — "+Q("заявка принята","request accepted","已接受申请"));ch=true}}}
+if(!c.rn)c.rn=n+15000;
+if(n>=c.rn){c.rn=n+24e4+Math.random()*3e5;if(c.rq.length<3){var k2=near1();if(k2>=0){c.rq.push(k2);toast("👥 "+Q("Новая заявка в друзья","New friend request","新的好友申请"));ch=true}}}
+if(c.cj&&c.cj.at<=n){var o=clan(c.cj.j);c.cj=null;if(!c.cl)joinClan(o)}
+var di=dayId();
+if(c.did===-1){c.did=di;c.dy=0}else if(c.did!==di){var od=c.did,v=c.dy;c.did=di;c.dy=0;
+if(v>0){var r=1;for(var q=0;q<NBOT;q++)if(dvv(q,od,1)>v)r++;var pc=r===1?.02:r<=10?.008:r<=100?.004:r<=1000?.0015:.0003,g=Math.max(100,Math.round(cap()*pc));c.pr.push({t:"d",p:r,g:g});c.st.w++;if(v>c.st.bd)c.st.bd=v;toast("☀️ "+Q("Итоги дня: место #","Daily result: place #","每日结果:名次 #")+nfmt(r));ch=true}}
+var wi=wid();
+if(c.wid===-1)c.wid=wi;else if(c.wid!==wi){var ow=c.wid;c.wid=wi;
+if(c.cl&&c.wy>0){var cl=c.cl,mine=teamW(cl,ow,1,c.wy),r2=1;for(var j=0;j<NCL;j++){if(j!==cl.j&&cWk(clan(j),ow,1)>mine)r2++}
+var pc2=r2===1?.05:r2<=10?.02:r2<=50?.01:0;if(pc2>0){c.pr.push({t:"t",p:r2,g:Math.max(200,Math.round(cap()*pc2))});c.st.w++}toast("🛡️ "+Q("Итоги недели: клан #","Weekly result: clan #","本周结果:战队第")+r2)}
+c.wy=0;if(c.cl)c.cl.tk=null;ch=true}
+if(ch)save();
+if(!$("t3").hidden)rall()}
+setInterval(tick,2000);
+
+/* ---------- питомцы в магазине + характеристики животных ---------- */
+function pst(ic,lb,val,p){return "<div class='pr'><i>"+ic+"</i><div><small>"+lb+"</small>"+bar(p)+"</div><b>"+val+"</b></div>"}
+var PH="";
+var DOGC=5e7;
+function dogCard(){var own=!!S.dgo,k=S.dgk||0;return "<div class='pet'><div class='pth'><div class='pav'>🐕</div><div class='pti'><b>"+Q("Пёс-защитник","Guard dog","守卫犬")+"</b><small>"+Q("Сам ловит каждого волка: волки больше ничего не утащат, а за поимку награда ×1.5.","Catches every wolf himself: wolves can't steal anymore and each catch pays ×1.5.","自动抓住每只狼,每次奖励×1.5。")+"</small></div></div><div class='pst'>"+pst("🐺",Q("Поймано волков","Wolves caught","抓到的狼"),String(k),Math.min(100,k*2))+"</div><div class='ptb'>"+(own?"<button class='b' disabled style='width:100%;padding:11px'>✅ "+Q("Пёс на страже","On guard","已就位")+"</button>":"<button class='b g' data-p='dog' style='width:100%;padding:11px' "+(S.c<DOGC?"disabled":"")+">"+Q("Купить пса · ","Buy the dog · ","购买犬 · ")+mf(DOGC)+"</button>")+"</div></div>"}
+function rPets(){if($("t1").hidden)return;var K=window.__cat;if(!K)return;var CATC=K.CATC,own=!!S.ct,lv=own?K.ctLv():1,iv=Math.round(45*(1-.04*(lv-1))),mood=own&&(S.cm||0)>Date.now(),mp=mood?Math.min(100,((S.cm||0)-Date.now())/1200):0,ck=S.ck||0,xp=lv>=10?100:(ck%25)/25*100;
+var h="<div class='pet'><div class='pth'><div class='pav'>🐈</div><div class='pti'><b>"+Q("Кошка","Cat","猫")+(own?" · "+Q("ур. ","lvl ","等级 ")+lv+"/10":"")+"</b><small>"+Q("Ловит мышей и приносит доход. Погладь её на ферме — будет ловить быстрее.","Catches mice and brings income. Pet her on the farm to make her faster.","抓老鼠带来收入。在农场上摸摸它,它会抓得更快。")+"</small></div></div><div class='pst'>"+
+pst("⚡",Q("Скорость охоты","Hunting speed","捕猎速度"),Q("раз в ~","every ~","每约")+iv+Q(" сек"," s","秒"),lv*10)+
+pst("💰",Q("Добыча за мышь","Reward per mouse","每只老鼠收益"),"≈ "+mf(Math.max(1,Math.round(psV()*2))),Math.min(100,15+lv*8))+
+pst("💗",Q("Настроение","Mood","心情"),own?(mood?Q("довольна","happy","开心"):Q("ждёт ласки","wants pets","想被摸")):"—",mp)+
+pst("⭐",Q("Опыт","Experience","经验"),own?(lv>=10?"MAX":ck%25+"/25"):"0/25",xp)+
+pst("🐭",Q("Поймано мышей","Mice caught","已抓老鼠"),String(ck),Math.min(100,ck/2.5))+
+"</div><div class='ptb'>"+(own?"<button class='b g' data-p='pet' style='width:100%;padding:11px'>🐾 "+Q("Погладить","Pet","抚摸")+"</button>":"<button class='b g' data-p='cat' style='width:100%;padding:11px' "+(S.c<CATC?"disabled":"")+">"+Q("Взять кошку · ","Adopt the cat · ","领养猫 · ")+mf(CATC)+"</button>")+"</div></div>";
+h+=dogCard();if(h!==PH){PH=h;$("shP").innerHTML=h}}
+$("shP").addEventListener("click",function(e){var b=e.target.closest("button[data-p]");if(!b||b.disabled)return;var K=window.__cat;if(!K)return;if(b.dataset.p==="dog"){if(!S.dgo&&S.c>=DOGC){S.c-=DOGC;S.dgo=1;S.dgk=0;chron("🐕 Куплен пёс-защитник");toast("🐕 Пёс-защитник охраняет ферму!");save()}}else if(b.dataset.p==="cat")K.ctAdopt();else K.ctPet();PH="";rPets()});
+$("shPH").textContent="🐾 "+Q("Питомцы","Pets","宠物");
+var CH=[];
+A.forEach(function(a,i){var inf=Sh[i].d.querySelector(".inf"),d=document.createElement("div");d.className="chp";inf.appendChild(d);CH[i]=d});
+function rChips(){if($("t1").hidden)return;A.forEach(function(a,i){if(Sh[i].d.style.display==="none")return;var n=S.l[i],h="<span>💵 "+mf(val(i))+Q("/шт","/pc","/件")+"</span><span>⚡ "+(n>0?mf(rate(i)*chM(i)*val(i))+Q("/сек","/s","/秒"):"—")+"</span><span>📦 ×"+mult(i)+"</span><span>👥 "+n+(S.rb[i]?" ✨"+S.rb[i]:"")+"</span>";if(CH[i].__h!==h){CH[i].__h=h;CH[i].innerHTML=h}})}
+setInterval(function(){rPets();rChips()},1000);
+
+build();C();show();
+document.querySelector('nav button[data-t="3"]').addEventListener("click",function(){C();show()});
+})();
+
+/* 💡 Подсказки */
+(function(){var TP={0:["Касайтесь животных: касание даёт больше товара, чем авто-добыча.","Нет корма — животные грустят. Следите за 🌾 в загоне.","Больных лечите 💊: кнопка появляется в загоне.","Лови 🌟 золотую звезду — быстрый бонус к деньгам.","Волк 🐺 крадёт животных. Коснитесь его или купите пса 🐕 в Магазине.","Характер 🐾 виден прямо в загоне животного и даёт бонус к товару.","Мини-игры дают деньги раз в 90 секунд — не пропускайте.","Колесо фортуны: 2 платные крутки в день, остальные за рекламу.","Ускорение ×2 удваивает добычу — включайте, когда играете активно.","Задания дня и серия входов — в 🎁 «Ещё»."],
+1:["Каждое новое животное повышает доход, но дорожает на 6–9%.","Улучшения 🥣💉🧥 экономят корм, защищают от болезней и греют зимой.","Постройки в «Ещё» дают постоянный % к доходу.","Пёс 🐕 за $50 млн сам ловит всех волков — цель на будущее.","Кошка 🐈 ловит мышей и приносит деньги, даже когда вы не касаетесь экрана.","25, 50 и 100 животных одного вида: товар растёт ×2, ×3, ×5."],
+2:["Цены меняются: ▲ — выгодно продавать, ▼ — лучше подождать.","Заказ покупателя платит больше рынка — выполняйте при возможности.","Торговец приходит ненадолго: заглядывайте в Магазин.","Лишних животных можно продать другим фермерам.","Амбар вмещает ограниченно — улучшайте, чтобы товар не пропадал."],
+3:["Рейтинг считает капитал: деньги + стоимость животных.","Ежедневный подарок можно забирать каждые 24 часа.","Ярмарка раз в 2 дня: выставите лучшее животное против 50 соперников.","Кланы и друзья — на вкладках сверху, у кланов свои недельные задания.","Достижения дают деньги — загляните вниз списка."],
+4:["Урожай — бесплатный корм для всех загонов.","Зимой грядки замерзают: копите корм до зимы.","Дождь ускоряет рост вдвое, засуха замедляет.","Арбуз растёт дольше всех, но даёт больше всего корма.","💎 Элитный огород растёт быстрее и даёт вдвое больше."],
+5:["Новые земли открывают новых животных — вплоть до единорога.","Энциклопедия заполняется сама, когда вы встречаете новое.","Прохождение игры: животные по 30 + энциклопедия + достижения.","Редкие породы ✨ считаются за двух животных."],
+6:["Задания: ★ лёгкие, ★★ средние, ★★★ эпические. Все пять — большой бонус.","Серия входов: заходите каждый день, награда растёт.","Сезонный пропуск даёт опыт за игру и продажи.","Коллекции дают +0,5% к ценам продажи навсегда.","Погладьте кошку на ферме — она будет ловить мышей быстрее."]};
+function row(t){var r=mk("row bar tp","<span class='em'>💡</span><div class='inf'><small></small></div><button class='b s'>→</button>"),a=TP[t],i=Math.floor(Math.random()*a.length),sm=r.querySelector("small");function go(){sm.textContent=a[i%a.length];i++}go();r.querySelector("button").onclick=go;var sec=$("t"+t);sec.insertBefore(r,sec.firstChild);return go}
+var G=[];for(var t=0;t<7;t++)G[t]=row(t);
+setInterval(function(){if(document.hidden)return;for(var t=0;t<7;t++)if(!$("t"+t).hidden)G[t]()},20000)})();
 window.__ready=1;
 })();/*IIFE_END*/
 </script>
