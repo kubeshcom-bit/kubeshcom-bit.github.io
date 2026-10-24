@@ -228,7 +228,7 @@ setTimeout(function(){if(!done&&window.__ready&&sc()>=.999)fin()},6000)})();
 /*IIFE*/(function(){
 /* ☁️ Облако (Supabase): вставьте адрес проекта и публичный ключ anon. Пусто = облако выключено */
 var CLOUD_URL="",CLOUD_KEY="";
-var VER=4,GAME_VERSION="1.2.0",MIGR={};
+var VER=4,GAME_VERSION="1.4.0",MIGR={};
 var SALT="fm#9Qz!2026-kX",TP=0;
 function hs(t){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0,c;i<t.length;i++){c=t.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return(4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
 function sg(t){return hs(SALT+t+SALT.split("").reverse().join(""))}
@@ -307,7 +307,7 @@ var BLD=[{e:"🌾",n:"Мельница",en:"Mill",nz:"磨坊",d:"урожай о
 function bB(i){var m=1;BLD.forEach(function(b,k){if(b.g&&b.g.indexOf(i)>=0)m+=.02*((S.bd||[])[k]||0)});return m}
 function ccN(){return Object.keys(S.cc||{}).length}
 function val(i){return Math.max(.01,Math.round(A[i].pr*M[i]*SP[seas()]*(1+.1*S.st)*.5*.7*(i===0?1.5:1)*bB(i)*(1+.005*ccN())*10000)/10000)}
-function fp(i){return A[i].pr*.28*(warm(i)?1:SF[seas()])*(S.wx.k===3?1.3:1)}
+function fp(i){return A[i].pr*.2744*(warm(i)?1:SF[seas()])*(S.wx.k===3?1.3:1)}
 function bt(i){return Math.max(20,ne(i)*6)}
 function psV(){var v=0;A.forEach(function(a,i){v+=rate(i)*chM(i)*val(i)});return v}
 var PM=A.map(function(a,i){return mult(i)});
@@ -450,11 +450,11 @@ var ACC=["курицу","кролика","барана","индюка","коро
 $("rs").onclick=function(){if(confirm(tr("Удалить весь прогресс?"))){S=fresh();R.forEach(function(x){x.p.concat(x.bb,x.rs).forEach(function(p){p.d.remove()});x.p=[];x.bb=[];x.rs=[]});PM=A.map(function(a,i){return mult(i)});gen();save()}};
 function mb(a){return function(){var t=a+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
 var rg=mb(1337),FN=["Иван","Пётр","Анна","Мария","Олег","Света","Игорь","Лена","Макс","Дима","Катя","Тимур","Нина","Артём","Зоя","Фёдор","Алла","Борис","Вера","Глеб"],FM=["Берёзки","Зелёный луг","Три дуба","Солнечная","Ромашка","Речная","Золотой колос","Тихая заводь","Красная гора","Лесной хутор","Белая овца","Ясная поляна","Медовая","Весёлый двор","Горная"];
-var NBOT=124567,BC=new Float64Array(NBOT),BG=new Float64Array(NBOT),CA=new Float64Array(NBOT),SRT=new Float64Array(NBOT);
-for(var bi=0;bi<NBOT;bi++){var u=Math.max(1/NBOT,rg());BC[bi]=20*Math.pow(1/u,1.65);BG[bi]=.02+rg()*.18}
+var NB0=124567,NCAP=NB0+500*730,NBOT=NB0,BC=new Float64Array(NCAP),BG=new Float64Array(NCAP),CA=new Float64Array(NCAP),SRT=new Float64Array(NCAP);function nbNow(){return Math.min(NCAP,NB0+Math.floor(500*(Date.now()-EP)/864e5))}
+for(var bi=0;bi<NCAP;bi++){var u=Math.max(1/NB0,rg());BC[bi]=20*Math.pow(1/u,1.65);BG[bi]=.02+rg()*.18}
 var NMS=["James","Emily","Michael","Sophia","Ethan","Olivia","Jacob","Emma","Daniel","Ava","Ryan","Mia","Tyler","Chloe","Jason","Иван","Анна","Пётр","Мария","Олег","Света","Игорь","Лена","Макс","Катя","Тимур","Нина","Артём","Зоя","Фёдор","Алла","Борис","Вера","Глеб","李伟","王芳","张敏","刘洋","陈静","杨磊","赵雪","黄涛","周婷","吴强","Wei","Mei","Jun","Ahmed","Fatima","Omar","Layla","Hassan","Zainab","محمد","فاطمة","أحمد","ليلى","عمر","نور","يوسف","سارة"];function botName(k){var h=Math.imul(k+1,2654435761)>>>0;return NMS[(h>>>8)%NMS.length]}
-var STRONG=(function(){var t=new Float64Array(BC);t.sort();var thr=t[NBOT-2000],o=[];for(var k=0;k<NBOT;k++)if(BC[k]>=thr)o.push(k);return o})();
-var EP=Date.UTC(2026,9,1);
+var STRONG=(function(){var t=new Float64Array(BC.subarray(0,NB0));t.sort();var thr=t[NB0-2000],o=[];for(var k=0;k<NB0;k++)if(BC[k]>=thr)o.push(k);return o})();
+var EP=Date.UTC(2026,9,1);NBOT=nbNow();setInterval(function(){NBOT=nbNow()},6e4);
 function botCap(k){return BC[k]*(1+BG[k]*(Date.now()-EP)/864e5)}
 var TT=[[0,"Новичок"],[1e3,"Фермер"],[1e4,"Хозяин"],[1e5,"Агромагнат"],[1e6,"Фермерский барон"],[1e7,"Король ферм"]];
 function title(c){var t=TT[0][1];TT.forEach(function(x){if(c>=x[0])t=x[1]});return t}
@@ -468,7 +468,7 @@ function wkUI(){if($("t3").hidden||Date.now()-WKT<10000)return;WKT=Date.now();va
 function nfmt(n){return n.toLocaleString(LOC)}
 function rank(){var c=cap()*(1+.1*S.st),f=(Date.now()-EP)/864e5,r=0;
 for(var k=0;k<NBOT;k++){var v=BC[k]*(1+BG[k]*f);CA[k]=v;if(v>c)r++}
-SRT.set(CA);SRT.sort();
+SRT.set(CA.subarray(0,NBOT));SRT.subarray(0,NBOT).sort();
 var want=new Map();function addP(pos){if(pos>=0&&pos<NBOT)want.set(SRT[NBOT-1-pos],pos)}
 for(var t=0;t<5;t++)addP(t);for(var d=-4;d<=4;d++)addP(r+d);
 var items=[{rk:r+1,n:S.nm||"Моя ферма",c:c,me:1}];
@@ -534,7 +534,7 @@ function sick(){if(document.hidden)return;var o=[];S.l.forEach(function(n,i){if(
 var CR=[{e:"🌾",n:"Пшеница",t:45,y:25,c:2},{e:"🌽",n:"Кукуруза",t:90,y:60,c:4},{e:"🎃",n:"Тыква",t:180,y:150,c:12},{e:"🥔",n:"Картошка",t:120,y:95,c:7},{e:"🍉",n:"Арбуз",t:300,y:290,c:30}],sel=0,PB=[],SB=[];
 function tot(){return S.l.reduce(function(a,b){return a+b},0)}
 function seedC(k){return Math.max(CR[k].c,Math.round(CR[k].c*cap()/5000))}
-function crY(c){return Math.round(CR[c].y*Math.max(1,Math.floor(tot()/4))*(1+.02*((S.bd||[])[0]||0)))}
+function crY(c){return Math.round(.7*CR[c].y*Math.max(1,Math.floor(tot()/4))*(1+.02*((S.bd||[])[0]||0)))}
 CR.forEach(function(c,k){var b=document.createElement("button");b.className="b";b.style.flex="1 1 30%";b.onclick=function(){sel=k};SB.push(b);$("seeds").appendChild(b)});
 for(var pk=0;pk<5;pk++)(function(k){var b=document.createElement("button");b.className="b";b.style.cssText="padding:20px 6px;font-size:15px;background:#8a6a3d";if(k===4)b.style.gridColumn="1/3";b.onclick=function(){plot(k)};PB.push(b);$("plots").appendChild(b)})(pk);
 var PLOT5=250000;
@@ -1209,7 +1209,7 @@ if(!c.id)c.id="RF-9"+String(Math.floor(Math.random()*1e5)).padStart(5,"0");
 if(!c.fr)c.fr=[];if(!c.rq)c.rq=[];if(!c.ou)c.ou={};if(c.tab===undefined)c.tab=0;
 if(!c.cs)c.cs={p:0,t:0};if(!c.pr)c.pr=[];if(!c.st)c.st={bd:0,w:0,pz:0};
 if(c.dy===undefined){c.dy=0;c.wy=0;c.did=-1;c.wid=-1;c.lw=S.wk||0}
-if(c.cl===undefined)c.cl=null;
+if(c.cl===undefined)c.cl=null;if(!c.gs)c.gs={};if(!c.gp)c.gp=[];
 return c}
 function mycap(){return cap()*(1+.1*S.st)}
 function bid(k){return "RF-"+(100000+k)}
@@ -1252,7 +1252,7 @@ $("fRqH").hidden=$("fRq").hidden=!c.rq.length;$("fRq").innerHTML=rq;
 var items=c.fr.map(function(k){return{k:k,v:botCap(k)}});items.sort(function(a,b){return b.v-a.v});
 var pos=1;items.forEach(function(x){if(x.v>mc)pos++});
 $("fLsH").textContent=Q("👥 Друзья","👥 Friends","👥 好友")+" · "+c.fr.length+"/50"+(c.fr.length?" · "+Q("вы #","you #","你第")+pos+Q(" из "," of ","/")+(c.fr.length+1):"");
-items.forEach(function(x,i){h+=plRow(x.k,"<span class='em' style='font-size:14px;color:var(--mut);min-width:28px;text-align:right'>#"+(i+(x.v>mc?1:2))+"</span>")});
+items.forEach(function(x,i){h+=plRow(x.k,"<button class='b s' data-c='chf' data-k='"+x.k+"'>💬</button>"+(c.gs[x.k]===dayId()?"<span class='em' style='font-size:16px' title='ok'>🎁✔</span>":"<button class='b g s' data-c='gf' data-k='"+x.k+"'>🎁</button>")+"<span class='em' style='font-size:14px;color:var(--mut);min-width:28px;text-align:right'>#"+(i+(x.v>mc?1:2))+"</span>")});
 if(!c.fr.length)h="<div class='ft'>"+Q("Пока нет друзей. Найдите игроков по имени или ID.","No friends yet. Find players by name or ID.","还没有好友。通过名字或ID查找玩家。")+"</div>";
 $("fLs").innerHTML=h;rSR()}
 function prof(k){var c=botCap(k),f=bfarm(k),ac=bach(c),r=1,fq=(Date.now()-EP)/864e5;
@@ -1263,12 +1263,12 @@ o.innerHTML="<div class='cms'><div class='bar' style='padding:0 0 8px'><span cla
 "<div class='cmch'><span>⭐ "+Q("Ур. ","Lv. ","等级 ")+plv(c)+"</span><span>🎖 "+title(c)+"</span><span>💰 "+mf(c)+"</span><span>🌍 #"+nfmt(r)+"</span></div>"+
 "<h3 style='margin:12px 2px 6px'>🌾 "+Q("Ферма","Farm","农场")+"</h3><div class='cmfm'>"+fm+"</div>"+
 "<h3 style='margin:12px 2px 6px'>🏅 "+Q("Достижения: ","Achievements: ","成就:")+ac+"/"+AC.length+"</h3>"+bar(ac/AC.length*100)+
-"<div style='display:flex;gap:8px;margin-top:14px'>"+(isFr(k)?"<button class='b r' style='flex:1' data-f='rm'>"+Q("Удалить из друзей","Remove friend","删除好友")+"</button>":"<button class='b g' style='flex:1' data-f='ad'>➕ "+Q("В друзья","Add friend","加好友")+"</button>")+"</div></div>";
-o.onclick=function(e){var t=e.target;if(t===o||t.closest("[data-x]")){o.remove();return}var b=t.closest("[data-f]");if(b){if(b.dataset.f==="rm")rmf(k);else addReq(k);o.remove()}};
+"<div style='display:flex;gap:8px;margin-top:14px'>"+(isFr(k)?"<button class='b g' style='flex:1' data-f='chat'>💬 "+Q("Чат","Chat","聊天")+"</button><button class='b r' style='flex:1' data-f='rm'>"+Q("Удалить из друзей","Remove friend","删除好友")+"</button>":"<button class='b g' style='flex:1' data-f='ad'>➕ "+Q("В друзья","Add friend","加好友")+"</button>")+"</div></div>";
+o.onclick=function(e){var t=e.target;if(t===o||t.closest("[data-x]")){o.remove();return}var b=t.closest("[data-f]");if(b){if(b.dataset.f==="chat"){o.remove();openChat("f"+k,botName(k),k);return}if(b.dataset.f==="rm")rmf(k);else addReq(k);o.remove()}};
 document.body.appendChild(o)}
 
 /* ---------- кланы ---------- */
-var NCL=600,CCOST=1000,CLR=[],BADGES=["🛡️","🐺","🦉","🐝","🌾","🦄","🔥","⭐"];
+var NCL=600,CCOST=500000,CLR=[],BADGES=["🛡️","🐺","🦉","🐝","🌾","🦄","🔥","⭐"];
 var ADJ=LANG==="ru"?["Золотые","Дружные","Весёлые","Быстрые","Мудрые","Лесные","Северные","Звёздные","Храбрые","Сытые","Солнечные","Дикие"]:["Golden","Friendly","Merry","Swift","Wise","Forest","Northern","Starry","Brave","Plump","Sunny","Wild"];
 var NOUN=LANG==="ru"?["Фермеры","Коровы","Лисы","Совы","Пчёлы","Жнецы","Бараны","Единороги","Волки","Курицы"]:["Farmers","Cows","Foxes","Owls","Bees","Reapers","Rams","Unicorns","Wolves","Hens"];
 function clan(j){if(CLR[j])return CLR[j];var r=mb(j*977+13),a=ADJ[Math.floor(r()*ADJ.length)],n=NOUN[Math.floor(r()*NOUN.length)];
@@ -1286,7 +1286,7 @@ function mkClan(nm,bd){var c=C();if(c.cl)return;nm=nm.trim().slice(0,16);
 if(nm.length<3){toast(Q("Название: от 3 символов","Name: at least 3 characters","名称至少3个字符"));return}
 if(S.c<CCOST){toast(Q("Не хватает денег","Not enough money","金钱不足"));return}
 S.c-=CCOST;c.cl={j:-1,id:"CL-"+(9000+Math.floor(Math.random()*900)),nm:nm,bd:bd,role:"lead",m:pickNear(29,Math.floor(Math.random()*1e9)),ct:Date.now(),pts:0,tk:null,wy0:0};save();toast("🛡️ "+Q("Клан создан: ","Clan created: ","战队已创建:")+nm);rall()}
-function leave(){var c=C();if(!c.cl)return;if(!confirm(Q("Покинуть клан?","Leave the clan?","退出战队?")))return;c.cl=null;c.cj=null;save();rall()}
+function leave(){var c=C();if(!c.cl)return;if(!confirm(Q("Покинуть клан?","Leave the clan?","退出战队?")))return;c.cl=null;c.cj=null;if(c.ch)delete c.ch.clan;save();rall()}
 function tks(){var c=C(),cl=c.cl;if(!cl)return null;var w=wid();
 if(!cl.tk||cl.tk.w!==w){var v=vis(cl),bs=0;for(var i=0;i<v;i++)bs+=bw(cl.m[i],w,1)*.3;var nd=Math.max(100,Math.round(cap()*.03));
 cl.tk={w:w,n:v,y0:c.wy,b0:{od:S.od||0,gs:S.gs||0},t:[bs+nd,Math.round(v*.8)+3,Math.round(v*.4)+2],bm:[bs,Math.round(v*.8),Math.round(v*.4)],cl:[0,0,0],ch:0}}
@@ -1317,7 +1317,7 @@ var tk=tks(),p=tprog(tk),cp=clCap(cl),n=vis(cl)+1,cb=clanBoard(),r=1;
 for(var j=0;j<NCL;j++){if(j!==cl.j&&cCap(clan(j))>cp)r++}
 h+="<div class='row cmc'><div class='bar' style='padding:0'><span class='em' style='font-size:40px'>"+cl.bd+"</span><div class='inf'><b style='font-size:17px'>"+E(cl.nm)+"</b><small>"+cl.id+" · "+(cl.role==="lead"?"👑 "+Q("Лидер","Leader","队长"):Q("Участник","Member","成员"))+"</small></div></div>"+
 "<div class='cmch'><span>👥 "+n+"/30</span><span>💰 "+mf(cp)+"</span><span>🏅 "+Q("Клан #","Clan #","战队第")+r+"</span><span>⭐ "+cl.pts+"</span></div></div>";
-h+="<h3>🎯 "+Q("Совместные задания недели","Weekly clan tasks","本周战队任务")+" · "+hm(WK-(Date.now()-EP)%WK)+"</h3>";
+h+="<button class='b g' style='width:100%;padding:11px;margin:8px 0' data-c='chk'>💬 "+Q("Чат клана","Clan chat","战队聊天")+"</button>";h+="<h3>🎯 "+Q("Совместные задания недели","Weekly clan tasks","本周战队任务")+" · "+hm(WK-(Date.now()-EP)%WK)+"</h3>";
 var nm=[Q("💰 Продажи клана","💰 Clan sales","💰 战队销售额"),Q("📦 Заказы покупателей","📦 Customer orders","📦 顾客订单"),Q("🌟 Золотые звёзды","🌟 Golden stars","🌟 金星")],gr=Math.max(200,Math.round(cap()*.01)),all3=1;
 for(var t=0;t<3;t++){var pr=Math.min(p[t],tk.t[t]),ok=p[t]>=tk.t[t],cld=tk.cl[t];if(!cld)all3=0;
 h+="<div class='row cmc' style='margin-bottom:8px'><div style='display:flex;justify-content:space-between;gap:8px;align-items:center'><b style='font-size:14px'>"+nm[t]+"</b>"+(cld?"<span class='em' style='font-size:18px'>✔</span>":"<button class='b g s' data-c='tc' data-k='"+t+"' "+(ok?"":"disabled")+">🎁 "+mf(gr)+"</button>")+"</div><small style='color:var(--mut);display:block;margin:3px 0 6px'>"+(t===0?mf(pr)+" / "+mf(tk.t[0]):Math.floor(pr)+" / "+tk.t[t])+"</small>"+bar(pr/tk.t[t]*100)+"</div>"}
@@ -1367,7 +1367,7 @@ $("cp2").innerHTML="";
 }
 var BSEL=0;
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#cmP [data-c],#cmT [data-c]");if(!b||b.disabled)return;var a=b.dataset.c,k=+b.dataset.k,c=C();
-if(a==="tb"){c.tab=k;show();save();return}
+if(a==="gf"){giftFr(k);return}if(a==="chf"){openChat("f"+k,botName(k),k);return}if(a==="chk"&&c.cl){openChat("clan",c.cl.nm,-1);return}if(a==="tb"){c.tab=k;show();save();return}
 if(a==="pf"){prof(k);return}
 if(a==="ad"){addReq(k);return}if(a==="ac"){acc(k);return}if(a==="dc"){dec(k);return}
 if(a==="cp"){var t=c.id;try{navigator.clipboard.writeText(t).then(function(){toast(Q("ID скопирован: ","ID copied: ","ID已复制:")+t)},function(){toast("ID: "+t)})}catch(x){toast("ID: "+t)}return}
@@ -1386,6 +1386,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target&&e.
 
 /* ---------- фоновый тик ---------- */
 function tick(){if(document.hidden)return;var c=C(),n=Date.now(),ch=false;
+c.gp=c.gp.filter(function(x){if(x.at>n)return true;S.c+=x.g;S.gf+=x.f;toast("🎁 "+botName(x.k)+" "+Q("прислал(а) подарок: ","sent a gift: ","送来礼物:")+mf(x.g)+" + 🌾"+x.f);ch=true;return false});
 var d=S.wk-c.lw;if(d>0){c.dy+=d;c.wy+=d}c.lw=S.wk;
 for(var k in c.ou){if(c.ou[k]<=n){delete c.ou[k];var kk=+k;if(c.fr.length<50&&c.fr.indexOf(kk)<0){c.fr.push(kk);toast("🤝 "+botName(kk)+" — "+Q("заявка принята","request accepted","已接受申请"));ch=true}}}
 if(!c.rn)c.rn=n+15000;
@@ -1424,6 +1425,26 @@ A.forEach(function(a,i){var inf=Sh[i].d.querySelector(".inf"),d=document.createE
 function rChips(){if($("t1").hidden)return;A.forEach(function(a,i){if(Sh[i].d.style.display==="none")return;var n=S.l[i],h="<span>💵 "+mf(val(i))+Q("/шт","/pc","/件")+"</span><span>⚡ "+(n>0?mf(rate(i)*chM(i)*val(i))+Q("/сек","/s","/秒"):"—")+"</span><span>📦 ×"+mult(i)+"</span><span>👥 "+n+(S.rb[i]?" ✨"+S.rb[i]:"")+"</span>";if(CH[i].__h!==h){CH[i].__h=h;CH[i].innerHTML=h}})}
 setInterval(function(){rPets();rChips()},1000);
 
+function giftFr(k){var c=C();if(!isFr(k))return;var d=dayId();if(c.gs[k]===d){toast(Q("Сегодня подарок уже отправлен","Gift already sent today","今天已送过礼物"));return}var cost=Math.max(50,Math.round(cap()*.001));if(S.c<cost){toast(Q("Не хватает денег: ","Not enough money: ","金钱不足:")+mf(cost));return}S.c-=cost;c.gs[k]=d;c.gp.push({k:k,at:Date.now()+8000+Math.random()*32000,g:cost*2,f:30});toast("🎁 "+Q("Подарок отправлен: ","Gift sent: ","礼物已送出:")+botName(k));save();rall()}
+/* 📰 лента событий */
+var EV=[],RU=LANG==="ru";
+function evTxt(e){var n=botName(e.k),a=A[e.a];return [RU?n+" купил(а) "+a.e+" "+a.n.toLowerCase():n+" bought "+a.e,RU?n+" достиг(ла) уровня "+e.v:n+" reached level "+e.v,RU?n+" вступил(а) в клан «"+clan(e.v).nm+"»":n+" joined clan "+clan(e.v).nm,RU?n+" поймал(а) 🌟 золотую звезду":n+" caught a 🌟 golden star",RU?n+" прогнал(а) 🐺 волка":n+" chased off a 🐺 wolf",RU?n+" открыл(а) новую землю "+LD[1+e.v%3].e:n+" unlocked new land "+LD[1+e.v%3].e,RU?n+" нашёл(ла) редкую породу ✨ "+RN[e.a]:n+" found a rare breed ✨ "+a.e,RU?n+" занял(а) место #"+(1+e.v%10)+" на ярмарке 🎪":n+" placed #"+(1+e.v%10)+" at the fair 🎪"][e.T]}
+function evNew(t){EV.push({t:t,k:Math.floor(Math.random()*NBOT),T:Math.floor(Math.random()*8),a:Math.floor(Math.random()*N),v:5+Math.floor(Math.random()*500)%NCL});EV.sort(function(x,y){return y.t-x.t});if(EV.length>15)EV.length=15}
+var evh=$("acs").previousElementSibling,evt=document.createElement("h3"),evc=document.createElement("div");evt.textContent="📰 "+Q("Лента событий","Activity feed","动态");evc.className="row";evh.parentNode.insertBefore(evt,evh);evh.parentNode.insertBefore(evc,evh);
+function evDraw(){var n=Date.now();evc.innerHTML=EV.map(function(e){var m=Math.floor((n-e.t)/6e4);return "<div class='bar' style='padding:6px 12px'><span class='em' style='font-size:22px;min-width:30px'>"+A[e.a].e+"</span><div class='inf'><small style='color:var(--ink)'>"+E(evTxt(e))+"</small><small style='display:block;font-size:11px'>"+(m<1?Q("только что","just now","刚刚"):m+Q(" мин назад"," min ago"," 分钟前"))+"</small></div></div>"}).join("")}
+for(var ei=0;ei<10;ei++)evNew(Date.now()-ei*70000-Math.random()*40000);evDraw();
+setInterval(function(){if(document.hidden)return;if(Math.random()<.7)evNew(Date.now());if(!$("t3").hidden)evDraw()},12000);
+var CHT=LANG==="ru"?["Привет! 👋","Как ферма?","Продал сегодня кучу яиц 🥚","Волки замучили 🐺","Купил нового единорога!","Го в соревнование недели 🏁","Удачи!","Ха-ха, отлично 😄","Кто уже открыл Африку?","Советую сажать арбузы 🍉","Я на 10-м уровне пропуска","Спасибо!","Давай дружить 🤝","Завтра будет лучше!","Накормил всех, теперь отдыхаю","Заходи на ярмарку!","Кошка поймала уже 100 мышей 🐈"]:["Hi! 👋","How's the farm?","Sold tons of eggs today 🥚","Wolves are annoying 🐺","Just bought a unicorn!","Let's win the weekly contest 🏁","Good luck!","Haha, nice 😄","Who unlocked Africa yet?","Try planting watermelons 🍉","I'm at pass level 10","Thanks!","Let's be friends 🤝","Tomorrow will be better!","Fed everyone, time to rest","Join the fair!","My cat caught 100 mice 🐈"];
+function openChat(key,title,k){var c=C();if(!c.ch)c.ch={};var L=c.ch[key]||(c.ch[key]=[]),o=document.createElement("div"),iv=null;o.className="cmo";
+o.innerHTML="<div class='cms'><div class='bar' style='padding:0 0 8px'><div class='inf'><b>💬 "+E(title)+"</b><small>"+(k<0?Q("Чат клана","Clan chat","战队聊天"):Q("Личный чат","Private chat","私聊"))+"</small></div><button class='b s' data-x='1'>✕</button></div><div style='height:44vh;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:4px 0'></div><div style='display:flex;gap:8px;margin-top:8px'><input class='nm' maxlength='140' placeholder='"+E(Q("Сообщение…","Message…","消息…"))+"'><button class='b g' data-s='1'>➤</button></div></div>";
+var bx=o.children[0].children[1],inp=o.querySelector("input");
+function draw(){bx.innerHTML=L.map(function(m){return "<div style='align-self:"+(m.me?"flex-end":"flex-start")+";max-width:80%;background:"+(m.me?"var(--acc);color:#fff":"var(--bg)")+";border-radius:12px;padding:6px 10px;font-size:13px'>"+(m.me||k>=0?"":"<small style='display:block;color:var(--mut);font-size:10px'>"+E(m.w)+"</small>")+E(m.t)+"</div>"}).join("");bx.scrollTop=bx.scrollHeight}
+function say(){var w=k;if(k<0){var n=c.cl?vis(c.cl):0;if(!n)return;w=c.cl.m[Math.floor(Math.random()*n)]}L.push({w:botName(w),t:CHT[Math.floor(Math.random()*CHT.length)]});if(L.length>60)L.shift();draw();save()}
+function send(){var t=inp.value.trim().slice(0,140);if(!t)return;inp.value="";L.push({me:1,t:t});if(L.length>60)L.shift();draw();save();setTimeout(say,1200+Math.random()*3000);if(k<0&&Math.random()<.5)setTimeout(say,4500+Math.random()*4000)}
+function close(){clearInterval(iv);o.remove()}
+o.onclick=function(e){var t=e.target;if(t===o||t.closest("[data-x]")){close();return}if(t.closest("[data-s]"))send()};
+inp.onkeydown=function(e){if(e.key==="Enter")send()};
+document.body.appendChild(o);draw();if(!L.length)setTimeout(say,800);if(k<0)iv=setInterval(function(){if(Math.random()<.4)say()},15000)}
 build();C();show();
 document.querySelector('nav button[data-t="3"]').addEventListener("click",function(){C();show()});
 })();
