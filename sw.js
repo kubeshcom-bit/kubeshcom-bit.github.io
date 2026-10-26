@@ -1,5 +1,5 @@
 // Версию меняйте при каждом обновлении игры (вместе с GAME_VERSION в index.html)
-var V = "1.7.0", C = "farm-" + V;
+var V = "1.8.0", C = "farm-" + V;
 var SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(C).then(function (c) { return Promise.all(SHELL.map(function (u) { return fetch(new Request(u, { cache: "reload" })).then(function (res) { if (res.ok) return c.put(u, res); }).catch(function () {}); })); }).then(function () { return self.skipWaiting(); }));
