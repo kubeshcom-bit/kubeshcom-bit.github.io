@@ -19,6 +19,14 @@
   }
   var AdMob = P("AdMob"), LN = P("LocalNotifications"), App = P("App");
 
+  /* ---------- Одна заставка вместо двух ----------
+     Системную заставку Android прячем, как только отрисована загрузочная картинка игры. */
+  var Splash = P("SplashScreen");
+  function hideSplash() { try { if (Splash && Splash.hide) { var r = Splash.hide({ fadeOutDuration: 0 }); if (r && r.catch) r.catch(function () {}); } } catch (e) {} }
+  function soon() { requestAnimationFrame(function () { requestAnimationFrame(hideSplash); }); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", soon); else soon();
+  setTimeout(hideSplash, 1200);
+
   /* ---------- Выход по кнопке «Выйти» ---------- */
   window.FARM_EXIT = function () { try { App.exitApp(); } catch (e) {} };
 
