@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "io.github.kubeshcom_bit.twa",
-        "sha256_cert_fingerprints": ["47:BE:70:7C:4E:00:DC:56:A6:DC:26:5B:CE:75:E4:45:CA:15:3B:D9:C6:FC:A2:BA:A4:1F:8D:84:DA:6B:09:0E"]
-      }
-    }]
