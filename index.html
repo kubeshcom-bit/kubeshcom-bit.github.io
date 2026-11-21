@@ -585,6 +585,25 @@ body.noads .rfqa{grid-template-columns:repeat(4,1fr)}
 .rfmsgi small{opacity:.65;font-size:11px}
 .rfmsgn{opacity:.7;font-size:12px;text-align:center;padding:8px}
 @media(prefers-reduced-motion:reduce){.rfmsgb{transition:none}}
+/* приглушённый жёлтый (режимы «Мягкие» и «Очень мягкие») */
+body.soft1{--y1:#e0c885;--y2:#bd9341;--yd:#8d6a2b}
+body.soft2{--y1:#d5c596;--y2:#a88b58;--yd:#7a6234}
+body.soft1 button.b.g:not([disabled]),body.soft2 button.b.g:not([disabled]){background:linear-gradient(var(--y1),var(--y2));animation:none}
+body.soft1 #mbB:not(:disabled),body.soft1 #whB:not(:disabled),body.soft1 #bsB:not(:disabled),body.soft2 #mbB:not(:disabled),body.soft2 #whB:not(:disabled),body.soft2 #bsB:not(:disabled){animation:v5soft 2.4s ease-in-out infinite}
+@keyframes v5soft{50%{transform:scale(1.03);box-shadow:0 0 8px rgba(189,147,65,.45)}}
+body.soft1 .rfpil .rfpl:first-child,body.soft2 .rfpil .rfpl:first-child{background:linear-gradient(var(--y1),var(--y2) 60%,var(--yd));border-color:#6d4a14}
+body.soft1 .rfpcard .rflv,body.soft2 .rfpcard .rflv{background:linear-gradient(var(--y1),var(--y2))}
+body.soft1 .rfpcard .rfxp i,body.soft2 .rfpcard .rfxp i{background:linear-gradient(90deg,#86b86a,var(--y1))}
+body.soft1 .rfqa .q0,body.soft2 .rfqa .q0{background:linear-gradient(var(--y1) 0,var(--y2) 45%,#5aa04a 46%,#3d7a2c)}
+body.soft1 .rfqa .q3,body.soft2 .rfqa .q3{background:linear-gradient(var(--y1),var(--yd))}
+body.soft1 .rfdq,body.soft2 .rfdq{background:linear-gradient(#f5eed3,#e8dbb0);border-color:var(--y2);box-shadow:0 2px 0 rgba(120,90,20,.3)}
+body.soft1 .rfdqh span,body.soft2 .rfdqh span{background:var(--y2)}
+body.soft1 .rfqm b u,body.soft2 .rfqm b u{color:var(--y2)}
+body.soft1 .rfqb i,body.soft2 .rfqb i{background:linear-gradient(90deg,#6fae6a,var(--y1))}
+body.soft1 .rfq button,body.soft2 .rfq button{background:linear-gradient(var(--y1),var(--y2))}
+body.soft1 .rfbd2,body.soft2 .rfbd2{background:linear-gradient(var(--y2),var(--yd))}
+body.soft1 .rfch .rfchf button.on,body.soft2 .rfch .rfchf button.on{background:var(--y2)}
+body.soft1 nav button[data-t="0"],body.soft2 nav button[data-t="0"]{--nc:var(--y2);--nca:rgba(189,147,65,.2);--ncd:var(--yd)}
 /* вкладка «Ещё»: убраны задания, питомец и постройки */
 #t6 .rfhide6{display:none!important}
 /* редкие гости */
@@ -694,7 +713,7 @@ sync();setInterval(sync,1500)})();
 /*IIFE*/(function(){
 /* ☁️ Облако (Supabase): вставьте адрес проекта и публичный ключ anon. Пусто = облако выключено */
 var CLOUD_URL="",CLOUD_KEY="";
-var VER=4,GAME_VERSION="1.0.7",MIGR={};
+var VER=4,GAME_VERSION="1.0.8",MIGR={};
 var SALT="fm#9Qz!2026-kX",TP=0;
 function hs(t){var h1=0xdeadbeef,h2=0x41c6ce57;for(var i=0,c;i<t.length;i++){c=t.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return(4294967296*(2097151&h2)+(h1>>>0)).toString(36)}
 function sg(t){return hs(SALT+t+SALT.split("").reverse().join(""))}
